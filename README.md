@@ -12,10 +12,10 @@
 
 ## 素材と利用条件
 
-素材の出典、同梱ライセンス、許諾の確認状況は [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) に記載しています。
+素材ごとの出典、ライセンス、画像の生成元を確認した方法は [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) に記載しています。Unityから取り込んだTextMesh Pro Essential Resourcesのライセンス本文と著作権表示は [TMP Essential Resourcesのライセンス](LICENSES/TMP-Essential-Resources.md) に同梱しています。
 
 未使用だったEmojiOneのサンプル素材は `Assets` から削除済みです。TextMesh Proの既定フォントはそのまま利用できます。
 
 BGM 2曲と効果音ラボのMP3 3件は、対応する `.meta` とともにリポジトリの登録対象から除外しています。通常成功音には同梱のKenney音源を設定しており、BGMなしで起動する構成です。
 
-個人用コピーでは、イベント用のMAX／AppLovin・Adjustと関連設定を取り除いています。終了後案内の要旨では、必要なプロジェクトの手元への保存が示されています。ソースの公開と素材の元ファイルの再配布には、個別の許諾確認が必要です。ソースコードの公開ライセンスは未設定です。
+個人用コピーでは、イベント用のMAX／AppLovin・Adjustと関連設定を取り除いています。イベント由来ソースコードの公開許可は主催者に確認済みです。ソースコードの再利用を許諾するライセンスは設定していません。

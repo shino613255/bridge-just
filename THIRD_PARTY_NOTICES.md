@@ -1,6 +1,6 @@
 # 素材の出典とライセンス
 
-「未確認」は、対象の版・入手経路または利用許諾を裏付ける資料が不足していることを示します。リポジトリへの登録候補と、素材ごとの公開許可は別に確認します。
+この文書は、素材ごとの出典、適用条件、未確認事項を記録します。
 
 ## GitHubで再配布可能な素材
 
@@ -15,7 +15,11 @@
 
 ゲームへの組み込みと元ファイルの再配布には、各行に示したライセンスが適用されます。OFLフォントの再配布には著作権表示とライセンス本文が必要です。PixelMplusは同梱の出典とライセンスを維持します。
 
-Unityのパッケージ依存は `Packages/manifest.json` と `Packages/packages-lock.json` に記録されています。Unityが復元する各パッケージの `LICENSE.md` と、該当する第三者通知を参照してください。[Unity Companion License](https://unity.com/legal/licenses/unity-companion-license)
+## Unityから取り込んだリソース
+
+`Assets/TextMesh Pro/` に同梱しているシェーダー、マテリアル、設定などの取り込み元は、Unity uGUI (`com.unity.ugui`) **2.0.0** の `Package Resources/TMP Essential Resources.unitypackage` です。配布アーカイブと現行ファイルを照合しました。Unity提供のリソースは、Unity Companion Licenseの条件に従って、有効なUnityエンジンライセンスで制作したコンテンツに関連して配布できます。同ライセンス第5条に従い、公式のライセンス本文とパッケージの `LICENSE.md` に記載された著作権表示を同梱しています。Liberation Sansには、上表のSIL Open Font Licenseが別途適用されます。 [TMPの同梱ライセンスと著作権表示](LICENSES/TMP-Essential-Resources.md) · [Unity Companion License](https://unity.com/legal/licenses/unity-companion-license)
+
+Unityが復元するパッケージの依存関係は `Packages/manifest.json` と `Packages/packages-lock.json` に記録しています。各パッケージには、その配布物に含まれるライセンスと第三者通知が適用されます。
 
 ## 元ファイルの再配布が制限される素材
 
@@ -26,14 +30,21 @@ Unityのパッケージ依存は `Packages/manifest.json` と `Packages/packages
 | 効果音ラボのMP3 3件 | 操作・演出音としての利用可。[効果音ラボ利用規約](https://soundeffect-lab.info/agreement/) | 元MP3の再配布禁止。MP3と `.meta` を除外済み。 |
 | `mockup-non-branded-android-smartphone-transparent.png` | Mobile FIRSTの公式配布PNGとバイト単位で一致。個人・商用の制作物で利用可。保存済みシーン・Prefab・設定からの参照はありません。[公式配布ページ](https://www.webmobilefirst.com/en/mockups/non-branded-android-smartphone/)・[Mockup license](https://www.webmobilefirst.com/en/license-agreement/#mockup-license) | 元画像ファイルの再配布禁止。PNGと `.meta` を除外済み。 |
 
-## 出典・許諾が未確認の素材
+## 画像の制作元と利用条件
 
-| 素材 | 確認結果 |
-| --- | --- |
-| `Assets/UI/AI/` のPNG 44件 | タイトル、背景、足場、橋、HUD、文字画像としてシーン・アセットに直接または間接の参照があります。元プロジェクトの作業記録では既存画像として使用。生成サービス・生成履歴・第三者入力素材・許諾は未確認です。 |
-| `Assets/UI/Generated/WorldProgress/` | 元プロジェクトの実装報告に、`CircleMask.png` と `RoundedPanel.png` を単色の図形としてローカル生成した記録があります。外部素材の出典は記録されていません。円マスクはGame Sceneの円形プレビューに使用。角丸パネルは保存済みの参照がなく、公開時に外す候補です。プロジェクト由来の権利は下記のイベント条件に従います。 |
-| `Assets/UI/Generated/AIBoard/` など | 作業記録によると、AIBoardの派生Spriteは元PNGを参照し、透明余白を切り出すUnityアセットです。元の `Assets/UI/AI/` の画像の許諾確認が必要です。 |
-| `Assets/icon-1024.png` | プロジェクトのアプリアイコン。イベント版の広告制作報告には既存画像としての使用と提出物とのハッシュ一致が記録されています。制作元・生成方法・元画像の許諾は未確認です。 |
+対象は `Assets/UI/AI/` のPNG 44件、数式で生成したPNG 2件、アプリアイコン1件の計47件です。
+
+| 制作元の確認方法 | 件数 | 対象 |
+| --- | ---: | --- |
+| ChatGPT生成をC2PAで検証 | 15 | `Assets/UI/AI/AI Board/` の10件、`Assets/UI/AI/START SCENE Image/` の3件、`Assets/UI/AI/scaffold.png`、`Assets/UI/AI/Font/ゲームオーバー グロッシーキャンディロゴ.png` |
+| ユーザー本人の申告による制作元確認（ChatGPT生成） | 30 | `Assets/UI/AI/` 直下の背景5件、`Assets/UI/AI/AI Bridge/` の4件、`Assets/UI/AI/Font/` のGAME OVERロゴを除くRainbow Fontの文字画像20件、`Assets/icon-1024.png` |
+| プロジェクト内の数式で生成 | 2 | `Assets/UI/Generated/WorldProgress/` の `CircleMask.png` と `RoundedPanel.png`。外部画像を入力せず、白い円と角丸矩形を生成しています。 |
+
+C2PAの15件は、埋め込み来歴の署名と現行PNG本体のハッシュを照合し、ChatGPTによる生成を確認しました。申告による30件は、同等の署名付き来歴を確認できていません。`Assets/UI/Generated/AIBoard/` のSprite 10件は元PNGの透明余白を切り出すUnityアセットです。公開条件は参照元のPNGに従い、47件の集計には含めていません。 [ChatGPT生成画像のC2PAについて](https://help.openai.com/en/articles/8912793-c2pa-in-chatgpt-images)
+
+OpenAIの個人向け利用規約（2026年1月1日発効）では、OpenAIと利用者の間で、法令で認められる範囲において出力は利用者に帰属します。規約、適用ポリシー、第三者の権利を遵守する範囲で、ゲームへの組み込みや、元PNG・加工PNGの公開が可能です。生成画像にOpenAIのクレジットを付けることは公式画像ガイド上は任意です。AI生成であることは、共有先に適用される公開ポリシーに従い、本書でも明示しています。 [OpenAI利用規約](https://openai.com/ja-JP/policies/terms-of-use/) · [共有と公開に関するポリシー](https://openai.com/ja-JP/policies/sharing-publication-policy/) · [公式画像ガイド](https://learn.chatgpt.com/docs/image-generation)
+
+ChatGPT生成の45件について、生成時に第三者の画像、ロゴ、文字素材などを入力したかは**未確認**です。第三者素材を使っていた場合は、入力と加工に必要な権利に加え、出力に残る第三者素材を公開リポジトリで再配布できるかを個別に確認します。C2PAとユーザー申告は制作元の根拠であり、第三者素材の許諾は個別の条件に従います。
 
 ## 削除済みのEmojiOneサンプル
 
@@ -43,6 +54,4 @@ Unityのパッケージ依存は `Packages/manifest.json` と `Packages/packages
 
 ## イベント由来のソース・素材
 
-ユーザー提供の終了後案内の要旨では、イベント用SDK・設定の除去、個人用アプリIDへの変更、必要なプロジェクトの手元への保存、個人公開時の素材・ライブラリ条件の確認が示されています。手元での継続開発はこの案内の範囲で扱います。
-
-公開の募集案内ではイベントでの提出・ストア配信を確認できます。コードの権利帰属、外部リポジトリでのソース公開、ポートフォリオへのソース・画像・動画の掲載、イベント由来の元素材の再配布については、参加時の合意文書または主催者の確認が必要です。第三者素材には各配布元の条件が適用されます。[Casual Game JAMの公式募集案内](https://www.cyberagent.co.jp/careers/students/event/detail/id=33809)
+プロジェクト所有者がCasual Game JAM運営に確認し、イベント由来ソースコードの公開許可を得ています。第三者素材の再配布には、本書に記載した素材ごとの条件が適用されます。ゲーム全体を対象とするライセンスと、ソースコードの再利用を許諾するライセンスは設定していません。
