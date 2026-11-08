@@ -1,0 +1,53 @@
+# Unity caches and local settings
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Generated IDE files
+/.vs/
+/.idea/
+/*.csproj
+/*.sln
+/*.slnx
+/*.user
+/*.userprefs
+
+# Builds and backups
+/[Bb]uild/
+/[Bb]uilds/
+/[Bb]ackup/
+/[Bb]ackups/
+*.apk
+*.aab
+*.apks
+*.bak
+
+# Signing keys and local credentials
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+.env
+.env.*
+
+# Leftover AppLovin configuration
+/ProjectSettings/AppLovinInternalSettings.json
+
+# Audio sources held locally and their Unity metadata
+/Assets/BGM.meta
+/Assets/BGM/Mini_mini_Kawaii_Pop.mp3
+/Assets/BGM/Mini_mini_Kawaii_Pop.mp3.meta
+/Assets/BGM/New_Train.mp3
+/Assets/BGM/New_Train.mp3.meta
+/Assets/Audio/*_効果音ラボ.mp3
+/Assets/Audio/*_効果音ラボ.mp3.meta
+
+# Unused mockup with restricted source redistribution
+/Assets/UI/image/mockup-non-branded-android-smartphone-transparent.png
+/Assets/UI/image/mockup-non-branded-android-smartphone-transparent.png.meta

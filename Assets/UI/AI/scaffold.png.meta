@@ -1,0 +1,2808 @@
+fileFormatVersion: 2
+guid: 7f89f4309c52cae4e8a0c549cf606d8e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 166739837942290310
+    second: scaffold_0
+  - first:
+      213: 2260233560086734474
+    second: scaffold_1
+  - first:
+      213: 521457846137589510
+    second: scaffold_2
+  - first:
+      213: 9076332028010376907
+    second: scaffold_3
+  - first:
+      213: 7604615883190899215
+    second: scaffold_4
+  - first:
+      213: -5706851555818510857
+    second: scaffold_5
+  - first:
+      213: -7838763972044407386
+    second: scaffold_6
+  - first:
+      213: 6255180724726011799
+    second: scaffold_7
+  - first:
+      213: -1015767020430927003
+    second: scaffold_8
+  - first:
+      213: -6801644322010135798
+    second: scaffold_9
+  - first:
+      213: -3663927694205476926
+    second: scaffold_10
+  - first:
+      213: -2657566439806146450
+    second: scaffold_11
+  - first:
+      213: -7200555838411932978
+    second: scaffold_12
+  - first:
+      213: -5798445953865303784
+    second: scaffold_13
+  - first:
+      213: 6816960893322307902
+    second: scaffold_14
+  - first:
+      213: 4011989571330996610
+    second: scaffold_15
+  - first:
+      213: 3018983740486033762
+    second: scaffold_16
+  - first:
+      213: 7024607977029275950
+    second: scaffold_17
+  - first:
+      213: 7025159311056011993
+    second: scaffold_18
+  - first:
+      213: 6521474343076588324
+    second: scaffold_19
+  - first:
+      213: -518520845203338698
+    second: scaffold_20
+  - first:
+      213: -837881413233275400
+    second: scaffold_21
+  - first:
+      213: -1591901393722199953
+    second: scaffold_22
+  - first:
+      213: 1485481741464355966
+    second: scaffold_23
+  - first:
+      213: -1681597339368784766
+    second: scaffold_24
+  - first:
+      213: 3328904322381726910
+    second: scaffold_25
+  - first:
+      213: -4230844345010115496
+    second: scaffold_26
+  - first:
+      213: -3982388033470138354
+    second: scaffold_27
+  - first:
+      213: 5943974407470880315
+    second: scaffold_28
+  - first:
+      213: 1982634759561768940
+    second: scaffold_29
+  - first:
+      213: 7965164783103568298
+    second: scaffold_30
+  - first:
+      213: -921077110752051993
+    second: scaffold_31
+  - first:
+      213: -9168413362548945985
+    second: scaffold_32
+  - first:
+      213: 8558942420661420683
+    second: scaffold_33
+  - first:
+      213: 3808904620523725190
+    second: scaffold_34
+  - first:
+      213: 5187552704614896442
+    second: scaffold_35
+  - first:
+      213: 3620008548467434513
+    second: scaffold_36
+  - first:
+      213: -7805392095318373636
+    second: scaffold_37
+  - first:
+      213: -2988736350990677046
+    second: scaffold_38
+  - first:
+      213: -652176569057941184
+    second: scaffold_39
+  - first:
+      213: 2498389810099386906
+    second: scaffold_40
+  - first:
+      213: 8659155354312278764
+    second: scaffold_41
+  - first:
+      213: -9154178818992500036
+    second: scaffold_42
+  - first:
+      213: 4956965515352675042
+    second: scaffold_43
+  - first:
+      213: -8891613794021564894
+    second: scaffold_44
+  - first:
+      213: -153226077275427160
+    second: scaffold_45
+  - first:
+      213: -7252262826227995675
+    second: scaffold_46
+  - first:
+      213: 7519083827109679824
+    second: scaffold_47
+  - first:
+      213: 4215359073569956450
+    second: scaffold_48
+  - first:
+      213: 5179081534016088271
+    second: scaffold_49
+  - first:
+      213: 2520076504195309904
+    second: scaffold_50
+  - first:
+      213: 6175670896387414516
+    second: scaffold_51
+  - first:
+      213: 7389369408037980146
+    second: scaffold_52
+  - first:
+      213: 7490815579947645256
+    second: scaffold_53
+  - first:
+      213: -2803790986792544473
+    second: scaffold_54
+  - first:
+      213: 8164163533385300184
+    second: scaffold_55
+  - first:
+      213: 6043375209179975997
+    second: scaffold_56
+  - first:
+      213: -2204729571056345144
+    second: scaffold_57
+  - first:
+      213: -2445745328723376284
+    second: scaffold_58
+  - first:
+      213: -8678015234510187333
+    second: scaffold_59
+  - first:
+      213: -7363123528385983786
+    second: scaffold_60
+  - first:
+      213: -8406568705499914595
+    second: scaffold_61
+  - first:
+      213: 2009638706538547300
+    second: scaffold_62
+  - first:
+      213: 9043326460136380176
+    second: scaffold_63
+  - first:
+      213: -5115314420226668394
+    second: scaffold_64
+  - first:
+      213: -346269121786793526
+    second: scaffold_65
+  - first:
+      213: 7722626971522337259
+    second: scaffold_66
+  - first:
+      213: -958052392513087900
+    second: scaffold_67
+  - first:
+      213: 3491263690760840769
+    second: scaffold_68
+  - first:
+      213: 7285866112697348034
+    second: scaffold_69
+  - first:
+      213: 8698079381770706610
+    second: scaffold_70
+  - first:
+      213: 159000970677497992
+    second: scaffold_71
+  - first:
+      213: 6167052414062879173
+    second: scaffold_72
+  - first:
+      213: -2929160151670906224
+    second: scaffold_73
+  - first:
+      213: -135581888962184791
+    second: scaffold_74
+  - first:
+      213: 7795782130697956169
+    second: scaffold_75
+  - first:
+      213: 6542111044220626772
+    second: scaffold_76
+  - first:
+      213: -7608547034393687302
+    second: scaffold_77
+  - first:
+      213: 443540583075405231
+    second: scaffold_78
+  - first:
+      213: 310759338136297453
+    second: scaffold_79
+  - first:
+      213: -2013990144667650461
+    second: scaffold_80
+  - first:
+      213: -930315500894076534
+    second: scaffold_81
+  - first:
+      213: -6481291339123515043
+    second: scaffold_82
+  - first:
+      213: 1260538909843232340
+    second: scaffold_83
+  - first:
+      213: 2960066163598510366
+    second: scaffold_84
+  - first:
+      213: 8756492127101664440
+    second: scaffold_85
+  - first:
+      213: 8303321729129651030
+    second: scaffold_86
+  - first:
+      213: -7576033941741320709
+    second: scaffold_87
+  - first:
+      213: -7097746755121467673
+    second: scaffold_88
+  - first:
+      213: 2369136832710990464
+    second: scaffold_89
+  - first:
+      213: 3302497810894730568
+    second: scaffold_90
+  - first:
+      213: 529510119458120724
+    second: scaffold_91
+  - first:
+      213: 868700335710970210
+    second: scaffold_92
+  - first:
+      213: 4908769160916174235
+    second: scaffold_93
+  - first:
+      213: -5623262029129633064
+    second: scaffold_94
+  - first:
+      213: 8564872425013631660
+    second: scaffold_95
+  - first:
+      213: -5731678601122782712
+    second: scaffold_96
+  - first:
+      213: 7586269711674573005
+    second: scaffold_97
+  - first:
+      213: -1692185588760615439
+    second: scaffold_98
+  - first:
+      213: 629543618744687267
+    second: scaffold_99
+  - first:
+      213: 3424460481596910169
+    second: scaffold_100
+  - first:
+      213: 2907989836947398271
+    second: scaffold_101
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scaffold_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 892
+        width: 140
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687d47acff0605200800000000000000
+      internalID: 166739837942290310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 925
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a86e26a9276fd5f10800000000000000
+      internalID: 2260233560086734474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 939
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f0f54f5279c3700800000000000000
+      internalID: 521457846137589510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_3
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 775
+        width: 500
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce2f0914eb95fd70800000000000000
+      internalID: 9076332028010376907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_4
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 911
+        width: 25
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0213e2dad5098960800000000000000
+      internalID: 7604615883190899215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_5
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 846
+        width: 198
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f56d850fb03dc0b0800000000000000
+      internalID: -5706851555818510857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_6
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 926
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6adb920f2bd173390800000000000000
+      internalID: -7838763972044407386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_7
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 882
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7971a2f4abddec650800000000000000
+      internalID: 6255180724726011799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_8
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 917
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b58a4d64547e1f0800000000000000
+      internalID: -1015767020430927003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 909
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03880a9684bb91a0800000000000000
+      internalID: -6801644322010135798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_10
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 826
+        width: 43
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf9a28ac2d172dc0800000000000000
+      internalID: -3663927694205476926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_11
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 897
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68ea54476d6e1bd0800000000000000
+      internalID: -2657566439806146450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_12
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 911
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca771a7d9c721c90800000000000000
+      internalID: -7200555838411932978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_13
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 907
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819be8e5028c78fa0800000000000000
+      internalID: -5798445953865303784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_14
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 890
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39a43e80d5ba9e50800000000000000
+      internalID: 6816960893322307902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_15
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 876
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28971c932437da730800000000000000
+      internalID: 4011989571330996610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_16
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 897
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261a95a77b595e920800000000000000
+      internalID: 3018983740486033762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_17
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 832
+        width: 104
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e219435bcbb6c7160800000000000000
+      internalID: 7024607977029275950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 866
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2850a2c216e7160800000000000000
+      internalID: 7025159311056011993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_19
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 815
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b67eedc5ee08a50800000000000000
+      internalID: 6521474343076588324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_20
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 856
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a050dd908ddc8f0800000000000000
+      internalID: -518520845203338698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_21
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 868
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd04504b4f3f54f0800000000000000
+      internalID: -837881413233275400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_22
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 870
+        width: 85
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f603dbddd1e68e9e0800000000000000
+      internalID: -1591901393722199953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_23
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 874
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74cf4006cd7d9410800000000000000
+      internalID: 1485481741464355966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_24
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 865
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c7eab1124c9a8e0800000000000000
+      internalID: -1681597339368784766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 51
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb443da08d4a23e20800000000000000
+      internalID: 3328904322381726910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_26
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 838
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ca3b3fb750945c0800000000000000
+      internalID: -4230844345010115496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_27
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 826
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08fe33ee27bbb8c0800000000000000
+      internalID: -3982388033470138354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_28
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 834
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3690572b3d3d7250800000000000000
+      internalID: 5943974407470880315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_29
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 817
+        width: 90
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef65033fcbb38b10800000000000000
+      internalID: 1982634759561768940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_30
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 779
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9e6524b23f98e60800000000000000
+      internalID: 7965164783103568298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 855
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec71e27f3da733f0800000000000000
+      internalID: -921077110752051993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_32
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 842
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb43538f9043c080800000000000000
+      internalID: -9168413362548945985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_33
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 854
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b82cb8cc8c877c670800000000000000
+      internalID: 8558942420661420683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_34
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 801
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68129a96292fbd430800000000000000
+      internalID: 3808904620523725190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_35
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 842
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33103433b3edf740800000000000000
+      internalID: 5187552704614896442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_36
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 812
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114674f589adc3230800000000000000
+      internalID: 3620008548467434513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_37
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 791
+        width: 57
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa08e97e3dada390800000000000000
+      internalID: -7805392095318373636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_38
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 819
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb47efaf10e586d0800000000000000
+      internalID: -2988736350990677046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_39
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 809
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049e776add003f6f0800000000000000
+      internalID: -652176569057941184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_40
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 805
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1afd659b401ca220800000000000000
+      internalID: 2498389810099386906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_41
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 805
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce284b4aaef7b2870800000000000000
+      internalID: 8659155354312278764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_42
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 850
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb21c837dd2d5f080800000000000000
+      internalID: -9154178818992500036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_43
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 818
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e215728fddaac440800000000000000
+      internalID: 4956965515352675042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_44
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 815
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e91673d54aa9480800000000000000
+      internalID: -8891613794021564894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_45
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 848
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aeebadc1b1afddf0800000000000000
+      internalID: -153226077275427160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_46
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 817
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ebe8e83269ca5b90800000000000000
+      internalID: -7252262826227995675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_47
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 819
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2d14727e6295860800000000000000
+      internalID: 7519083827109679824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_48
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 822
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2626bd45eb6ff7a30800000000000000
+      internalID: 4215359073569956450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_49
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 787
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc860d9173bcfd740800000000000000
+      internalID: 5179081534016088271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_50
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 791
+        width: 78
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051ae578a3c19f220800000000000000
+      internalID: 2520076504195309904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_51
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 842
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9d3ecc5f364b550800000000000000
+      internalID: 6175670896387414516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_52
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 844
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f70e3873505c8660800000000000000
+      internalID: 7389369408037980146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_53
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 785
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 849bdb8f419b4f760800000000000000
+      internalID: 7490815579947645256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_54
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 803
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 727d9cfd3fee619d0800000000000000
+      internalID: -2803790986792544473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_55
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 805
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8f0af5a7fec4170800000000000000
+      internalID: 8164163533385300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_56
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 1365
+        height: 780
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31139bcbb16ed350800000000000000
+      internalID: 6043375209179975997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_57
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 765
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf1363e22a3761e0800000000000000
+      internalID: -2204729571056345144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_58
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 767
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4674f56e497fe0ed0800000000000000
+      internalID: -2445745328723376284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_59
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 768
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4979f4f1f719780800000000000000
+      internalID: -8678015234510187333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_60
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 775
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da8b35992ee0d990800000000000000
+      internalID: -7363123528385983786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_61
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 753
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e13c06d4ed55b80800000000000000
+      internalID: -8406568705499914595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_62
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 767
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4680b1e81cba3eb10800000000000000
+      internalID: 2009638706538547300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_63
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 765
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017d15c7089508d70800000000000000
+      internalID: 9043326460136380176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_64
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 762
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698c4fb03a0c209b0800000000000000
+      internalID: -5115314420226668394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_65
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 765
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1363f711ec13bf0800000000000000
+      internalID: -346269121786793526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 282
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9807a70584c2b60800000000000000
+      internalID: 7722626971522337259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_67
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 276
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4665b0ccc6054b2f0800000000000000
+      internalID: -958052392513087900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_68
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 260
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146e40944d5737030800000000000000
+      internalID: 3491263690760840769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_69
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 202
+        width: 84
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfa16890a89c1560800000000000000
+      internalID: 7285866112697348034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_70
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 234
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be97920d19c5b870800000000000000
+      internalID: 8698079381770706610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_71
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 201
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880bc285a82e43200800000000000000
+      internalID: 159000970677497992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_72
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 198
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1ee630f75c59550800000000000000
+      internalID: 6167052414062879173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_73
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 171
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0922d658c588957d0800000000000000
+      internalID: -2929160151670906224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_74
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 158
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9be668df05e1ef0800000000000000
+      internalID: -135581888962184791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_75
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 134
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94be6964b8e203c60800000000000000
+      internalID: 7795782130697956169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_76
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 135
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4572ee7455f3aca50800000000000000
+      internalID: 6542111044220626772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_77
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 127
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afacc16b8c2096690800000000000000
+      internalID: -7608547034393687302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_78
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 98
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faddda17fc5c72600800000000000000
+      internalID: 443540583075405231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_79
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 118
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: defdf38b8f9005400800000000000000
+      internalID: 310759338136297453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_80
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 129
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36672fd42aedc04e0800000000000000
+      internalID: -2013990144667650461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_81
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 94
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a814b202bfad613f0800000000000000
+      internalID: -930315500894076534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_82
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 112
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d512abdcdd3dd06a0800000000000000
+      internalID: -6481291339123515043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_83
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 128
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45693cab5755e7110800000000000000
+      internalID: 1260538909843232340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_84
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 96
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1941f02e74441920800000000000000
+      internalID: 2960066163598510366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_85
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 104
+        width: 40
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc366a123f458970800000000000000
+      internalID: 8756492127101664440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_86
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 112
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b1e88ae135b3370800000000000000
+      internalID: 8303321729129651030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_87
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 86
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5c43005458cd690800000000000000
+      internalID: -7576033941741320709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_88
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 79
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eead438eecbf7d90800000000000000
+      internalID: -7097746755121467673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_89
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 116
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a580aa56dd0e020800000000000000
+      internalID: 2369136832710990464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_90
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 76
+        width: 73
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845b2e9f244d4dd20800000000000000
+      internalID: 3302497810894730568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_91
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 111
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 414a64fe5a2395700800000000000000
+      internalID: 529510119458120724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_92
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 110
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261a05e4a5e3e0c00800000000000000
+      internalID: 868700335710970210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_93
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 104
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b950dc84b837f1440800000000000000
+      internalID: 4908769160916174235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_94
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 111
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d239c25af826f1b0800000000000000
+      internalID: -5623262029129633064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_95
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 108
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caad977871a8cd670800000000000000
+      internalID: 8564872425013631660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_96
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 88
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8026e551eacf470b0800000000000000
+      internalID: -5731678601122782712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_97
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 86
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc00ba6eb18d74960800000000000000
+      internalID: 7586269711674573005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_98
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 80
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f563ef2c262488e0800000000000000
+      internalID: -1692185588760615439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_99
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 88
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa14e5f5969cb800800000000000000
+      internalID: 629543618744687267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_100
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 66
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a62f81aa0268f20800000000000000
+      internalID: 3424460481596910169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaffold_101
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 48
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e12b979514b5820800000000000000
+      internalID: 2907989836947398271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      scaffold_0: 166739837942290310
+      scaffold_1: 2260233560086734474
+      scaffold_10: -3663927694205476926
+      scaffold_100: 3424460481596910169
+      scaffold_101: 2907989836947398271
+      scaffold_11: -2657566439806146450
+      scaffold_12: -7200555838411932978
+      scaffold_13: -5798445953865303784
+      scaffold_14: 6816960893322307902
+      scaffold_15: 4011989571330996610
+      scaffold_16: 3018983740486033762
+      scaffold_17: 7024607977029275950
+      scaffold_18: 7025159311056011993
+      scaffold_19: 6521474343076588324
+      scaffold_2: 521457846137589510
+      scaffold_20: -518520845203338698
+      scaffold_21: -837881413233275400
+      scaffold_22: -1591901393722199953
+      scaffold_23: 1485481741464355966
+      scaffold_24: -1681597339368784766
+      scaffold_25: 3328904322381726910
+      scaffold_26: -4230844345010115496
+      scaffold_27: -3982388033470138354
+      scaffold_28: 5943974407470880315
+      scaffold_29: 1982634759561768940
+      scaffold_3: 9076332028010376907
+      scaffold_30: 7965164783103568298
+      scaffold_31: -921077110752051993
+      scaffold_32: -9168413362548945985
+      scaffold_33: 8558942420661420683
+      scaffold_34: 3808904620523725190
+      scaffold_35: 5187552704614896442
+      scaffold_36: 3620008548467434513
+      scaffold_37: -7805392095318373636
+      scaffold_38: -2988736350990677046
+      scaffold_39: -652176569057941184
+      scaffold_4: 7604615883190899215
+      scaffold_40: 2498389810099386906
+      scaffold_41: 8659155354312278764
+      scaffold_42: -9154178818992500036
+      scaffold_43: 4956965515352675042
+      scaffold_44: -8891613794021564894
+      scaffold_45: -153226077275427160
+      scaffold_46: -7252262826227995675
+      scaffold_47: 7519083827109679824
+      scaffold_48: 4215359073569956450
+      scaffold_49: 5179081534016088271
+      scaffold_5: -5706851555818510857
+      scaffold_50: 2520076504195309904
+      scaffold_51: 6175670896387414516
+      scaffold_52: 7389369408037980146
+      scaffold_53: 7490815579947645256
+      scaffold_54: -2803790986792544473
+      scaffold_55: 8164163533385300184
+      scaffold_56: 6043375209179975997
+      scaffold_57: -2204729571056345144
+      scaffold_58: -2445745328723376284
+      scaffold_59: -8678015234510187333
+      scaffold_6: -7838763972044407386
+      scaffold_60: -7363123528385983786
+      scaffold_61: -8406568705499914595
+      scaffold_62: 2009638706538547300
+      scaffold_63: 9043326460136380176
+      scaffold_64: -5115314420226668394
+      scaffold_65: -346269121786793526
+      scaffold_66: 7722626971522337259
+      scaffold_67: -958052392513087900
+      scaffold_68: 3491263690760840769
+      scaffold_69: 7285866112697348034
+      scaffold_7: 6255180724726011799
+      scaffold_70: 8698079381770706610
+      scaffold_71: 159000970677497992
+      scaffold_72: 6167052414062879173
+      scaffold_73: -2929160151670906224
+      scaffold_74: -135581888962184791
+      scaffold_75: 7795782130697956169
+      scaffold_76: 6542111044220626772
+      scaffold_77: -7608547034393687302
+      scaffold_78: 443540583075405231
+      scaffold_79: 310759338136297453
+      scaffold_8: -1015767020430927003
+      scaffold_80: -2013990144667650461
+      scaffold_81: -930315500894076534
+      scaffold_82: -6481291339123515043
+      scaffold_83: 1260538909843232340
+      scaffold_84: 2960066163598510366
+      scaffold_85: 8756492127101664440
+      scaffold_86: 8303321729129651030
+      scaffold_87: -7576033941741320709
+      scaffold_88: -7097746755121467673
+      scaffold_89: 2369136832710990464
+      scaffold_9: -6801644322010135798
+      scaffold_90: 3302497810894730568
+      scaffold_91: 529510119458120724
+      scaffold_92: 868700335710970210
+      scaffold_93: 4908769160916174235
+      scaffold_94: -5623262029129633064
+      scaffold_95: 8564872425013631660
+      scaffold_96: -5731678601122782712
+      scaffold_97: 7586269711674573005
+      scaffold_98: -1692185588760615439
+      scaffold_99: 629543618744687267
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

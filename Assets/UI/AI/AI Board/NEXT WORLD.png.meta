@@ -1,0 +1,3016 @@
+fileFormatVersion: 2
+guid: bc1b6ba0e8d5ab24d9aa1c94603b1ae9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3316192380945305006
+    second: NEXT WORLD_0
+  - first:
+      213: 2070518800336556591
+    second: NEXT WORLD_1
+  - first:
+      213: 1844181253108587327
+    second: NEXT WORLD_2
+  - first:
+      213: -5872933634329414036
+    second: NEXT WORLD_3
+  - first:
+      213: -7475782181059239460
+    second: NEXT WORLD_4
+  - first:
+      213: -5246702153679674306
+    second: NEXT WORLD_5
+  - first:
+      213: 3154694986016489182
+    second: NEXT WORLD_6
+  - first:
+      213: -8892371417447088552
+    second: NEXT WORLD_7
+  - first:
+      213: -2598217398137570834
+    second: NEXT WORLD_8
+  - first:
+      213: 4228745819756227094
+    second: NEXT WORLD_9
+  - first:
+      213: 5953054647956596586
+    second: NEXT WORLD_10
+  - first:
+      213: 8986551828568428198
+    second: NEXT WORLD_11
+  - first:
+      213: -7023109790635651750
+    second: NEXT WORLD_12
+  - first:
+      213: -5675674895416943052
+    second: NEXT WORLD_13
+  - first:
+      213: 2123598814867989821
+    second: NEXT WORLD_14
+  - first:
+      213: -6986728753333192810
+    second: NEXT WORLD_15
+  - first:
+      213: 1626710167610477236
+    second: NEXT WORLD_16
+  - first:
+      213: -1015907655899413532
+    second: NEXT WORLD_17
+  - first:
+      213: 1785137097593384789
+    second: NEXT WORLD_18
+  - first:
+      213: 1267231729041598345
+    second: NEXT WORLD_19
+  - first:
+      213: 382847016643482813
+    second: NEXT WORLD_20
+  - first:
+      213: -6774915169359148729
+    second: NEXT WORLD_21
+  - first:
+      213: 8004414955269970181
+    second: NEXT WORLD_22
+  - first:
+      213: -8431477989553208908
+    second: NEXT WORLD_23
+  - first:
+      213: 8490279139242907129
+    second: NEXT WORLD_24
+  - first:
+      213: -686794158843314259
+    second: NEXT WORLD_25
+  - first:
+      213: -9194773293225987009
+    second: NEXT WORLD_26
+  - first:
+      213: 6387415457914702155
+    second: NEXT WORLD_27
+  - first:
+      213: -1287290189126504093
+    second: NEXT WORLD_28
+  - first:
+      213: 1917472392009750073
+    second: NEXT WORLD_29
+  - first:
+      213: 4522639992222243088
+    second: NEXT WORLD_30
+  - first:
+      213: -4170593672600299715
+    second: NEXT WORLD_31
+  - first:
+      213: 7443175970490165985
+    second: NEXT WORLD_32
+  - first:
+      213: 4371292551647646313
+    second: NEXT WORLD_33
+  - first:
+      213: 7244509738953732546
+    second: NEXT WORLD_34
+  - first:
+      213: -4817728146897010542
+    second: NEXT WORLD_35
+  - first:
+      213: 104212695262931329
+    second: NEXT WORLD_36
+  - first:
+      213: -5924682448382455174
+    second: NEXT WORLD_37
+  - first:
+      213: 998290746046514437
+    second: NEXT WORLD_38
+  - first:
+      213: -4057566020413748420
+    second: NEXT WORLD_39
+  - first:
+      213: 7445064764386841068
+    second: NEXT WORLD_40
+  - first:
+      213: 595044891021667770
+    second: NEXT WORLD_41
+  - first:
+      213: -8113516844584037866
+    second: NEXT WORLD_42
+  - first:
+      213: 6578143581880209011
+    second: NEXT WORLD_43
+  - first:
+      213: 7299788771419205789
+    second: NEXT WORLD_44
+  - first:
+      213: 6622947246966005645
+    second: NEXT WORLD_45
+  - first:
+      213: -1374225389843282807
+    second: NEXT WORLD_46
+  - first:
+      213: 21392280632650772
+    second: NEXT WORLD_47
+  - first:
+      213: -5438766526807541118
+    second: NEXT WORLD_48
+  - first:
+      213: 1015494276466133327
+    second: NEXT WORLD_49
+  - first:
+      213: -5709238424975407316
+    second: NEXT WORLD_50
+  - first:
+      213: 7921294427733476290
+    second: NEXT WORLD_51
+  - first:
+      213: -5107916213718252814
+    second: NEXT WORLD_52
+  - first:
+      213: 6192602727225001088
+    second: NEXT WORLD_53
+  - first:
+      213: 6045582452062172702
+    second: NEXT WORLD_54
+  - first:
+      213: -1028608248792926676
+    second: NEXT WORLD_55
+  - first:
+      213: 1429266280761486813
+    second: NEXT WORLD_56
+  - first:
+      213: -8704393553804089438
+    second: NEXT WORLD_57
+  - first:
+      213: 641935136263303838
+    second: NEXT WORLD_58
+  - first:
+      213: 8005513779089462459
+    second: NEXT WORLD_59
+  - first:
+      213: -8307025016265645413
+    second: NEXT WORLD_60
+  - first:
+      213: 804424795502043211
+    second: NEXT WORLD_61
+  - first:
+      213: 640400374172184231
+    second: NEXT WORLD_62
+  - first:
+      213: 8385934037700793888
+    second: NEXT WORLD_63
+  - first:
+      213: -9142429109812579831
+    second: NEXT WORLD_64
+  - first:
+      213: -3284281090653441431
+    second: NEXT WORLD_65
+  - first:
+      213: 3729518101565735624
+    second: NEXT WORLD_66
+  - first:
+      213: -8721993588307118837
+    second: NEXT WORLD_67
+  - first:
+      213: -5344307725728581993
+    second: NEXT WORLD_68
+  - first:
+      213: -5904402574996966312
+    second: NEXT WORLD_69
+  - first:
+      213: 3919829412696627218
+    second: NEXT WORLD_70
+  - first:
+      213: -2265582775913807078
+    second: NEXT WORLD_71
+  - first:
+      213: -2325795795272378669
+    second: NEXT WORLD_72
+  - first:
+      213: -5045362931585321509
+    second: NEXT WORLD_73
+  - first:
+      213: -2979798110195996652
+    second: NEXT WORLD_74
+  - first:
+      213: 6218242565913877523
+    second: NEXT WORLD_75
+  - first:
+      213: -543172017074685446
+    second: NEXT WORLD_76
+  - first:
+      213: -7121802602257197076
+    second: NEXT WORLD_77
+  - first:
+      213: 7175180516587972440
+    second: NEXT WORLD_78
+  - first:
+      213: -6082767647404003655
+    second: NEXT WORLD_79
+  - first:
+      213: -3688828055561473762
+    second: NEXT WORLD_80
+  - first:
+      213: -579423730517147086
+    second: NEXT WORLD_81
+  - first:
+      213: -7251056209429559537
+    second: NEXT WORLD_82
+  - first:
+      213: 4343453359404779981
+    second: NEXT WORLD_83
+  - first:
+      213: -1329733024985469073
+    second: NEXT WORLD_84
+  - first:
+      213: 1924028895985532792
+    second: NEXT WORLD_85
+  - first:
+      213: -8381759036292560720
+    second: NEXT WORLD_86
+  - first:
+      213: 6177845826141570923
+    second: NEXT WORLD_87
+  - first:
+      213: 6204010839928921828
+    second: NEXT WORLD_88
+  - first:
+      213: 1514308229725337048
+    second: NEXT WORLD_89
+  - first:
+      213: 4928673997927430376
+    second: NEXT WORLD_90
+  - first:
+      213: 3609268923369654164
+    second: NEXT WORLD_91
+  - first:
+      213: 6784139558678373563
+    second: NEXT WORLD_92
+  - first:
+      213: 2126839310707314984
+    second: NEXT WORLD_93
+  - first:
+      213: 4907764699134404950
+    second: NEXT WORLD_94
+  - first:
+      213: 5397118664375772215
+    second: NEXT WORLD_95
+  - first:
+      213: 1334930416819338030
+    second: NEXT WORLD_96
+  - first:
+      213: -6938326884894612
+    second: NEXT WORLD_97
+  - first:
+      213: 6887513068801753730
+    second: NEXT WORLD_98
+  - first:
+      213: 1400917967557071241
+    second: NEXT WORLD_99
+  - first:
+      213: 3732376898304730705
+    second: NEXT WORLD_100
+  - first:
+      213: 3038373780311080423
+    second: NEXT WORLD_101
+  - first:
+      213: 1233133745619049491
+    second: NEXT WORLD_102
+  - first:
+      213: -6937842537524185284
+    second: NEXT WORLD_103
+  - first:
+      213: 5849675241822872883
+    second: NEXT WORLD_104
+  - first:
+      213: -5897531809761879239
+    second: NEXT WORLD_105
+  - first:
+      213: -2519223981915221492
+    second: NEXT WORLD_106
+  - first:
+      213: -3188033809967778962
+    second: NEXT WORLD_107
+  - first:
+      213: 603244110416370052
+    second: NEXT WORLD_108
+  - first:
+      213: -5775572568277867627
+    second: NEXT WORLD_109
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NEXT WORLD_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 626
+        width: 91
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead0a19866b750e20800000000000000
+      internalID: 3316192380945305006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 657
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2214daf0e5fbbc10800000000000000
+      internalID: 2070518800336556591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 646
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3bd8fc2419d79910800000000000000
+      internalID: 1844181253108587327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_3
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 651
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66f958c9f52f7ea0800000000000000
+      internalID: -5872933634329414036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_4
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 634
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd1e4c7f6bfa04890800000000000000
+      internalID: -7475782181059239460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_5
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 665
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3465af7038ff27b0800000000000000
+      internalID: -5246702153679674306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_6
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 679
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edef730206ab7cb20800000000000000
+      internalID: 3154694986016489182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_7
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 624
+        width: 244
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85eba344f43f79480800000000000000
+      internalID: -8892371417447088552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_8
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 644
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee935c6da0741fbd0800000000000000
+      internalID: -2598217398137570834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_9
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 644
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61aecff0be58faa30800000000000000
+      internalID: 4228745819756227094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_10
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 676
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67e0f369af7d9250800000000000000
+      internalID: 5953054647956596586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_11
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 619
+        width: 53
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ae45797645a6bc70800000000000000
+      internalID: 8986551828568428198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_12
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 620
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d089efad6e88e90800000000000000
+      internalID: -7023109790635651750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_13
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 697
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e121ee0c3fb31b0800000000000000
+      internalID: -5675674895416943052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_14
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 691
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35a5adeed9887d10800000000000000
+      internalID: 2123598814867989821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_15
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 661
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 697319357372a0f90800000000000000
+      internalID: -6986728753333192810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_16
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 634
+        width: 39
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba40fc574c339610800000000000000
+      internalID: 1626710167610477236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_17
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 620
+        width: 132
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e304859e55c6e1f0800000000000000
+      internalID: -1015907655899413532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_18
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 630
+        width: 277
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55fec617bb416c810800000000000000
+      internalID: 1785137097593384789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_19
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 622
+        width: 122
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987e0a12b8c169110800000000000000
+      internalID: 1267231729041598345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 2123
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db45a5e4555205500800000000000000
+      internalID: 382847016643482813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_21
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 600
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74941fa6c8aaaf1a0800000000000000
+      internalID: -6774915169359148729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_22
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 594
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509d0bb1ef4651f60800000000000000
+      internalID: 8004414955269970181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_23
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 594
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1082db07f5dfa80800000000000000
+      internalID: -8431477989553208908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_24
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 598
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f59b7ac4e783d570800000000000000
+      internalID: 8490279139242907129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_25
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 162
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafb450f9540876f0800000000000000
+      internalID: -686794158843314259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_26
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 128
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f343403e76a956080800000000000000
+      internalID: -9194773293225987009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_27
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 128
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4948d95488a4a850800000000000000
+      internalID: 6387415457914702155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_28
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 108
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361f442b460a22ee0800000000000000
+      internalID: -1287290189126504093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_29
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 130
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9361c583bfa3c9a10800000000000000
+      internalID: 1917472392009750073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_30
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 93
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019d1676c15a3ce30800000000000000
+      internalID: 4522639992222243088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_31
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 111
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d37da2ac6231f16c0800000000000000
+      internalID: -4170593672600299715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_32
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 101
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea2ac90c197b4760800000000000000
+      internalID: 7443175970490165985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_33
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962d4466a63f9ac30800000000000000
+      internalID: 4371292551647646313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_34
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 63
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1f13a793ba98460800000000000000
+      internalID: 7244509738953732546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_35
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 103
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2908dcb96cdf32db0800000000000000
+      internalID: -4817728146897010542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_36
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 107
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189ab3ae4ec327100800000000000000
+      internalID: 104212695262931329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_37
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 112
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a721c2914bc47cda0800000000000000
+      internalID: -5924682448382455174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_38
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 81
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50589a4f424aadd00800000000000000
+      internalID: 998290746046514437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_39
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 110
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b0b8cc331a0b7c0800000000000000
+      internalID: -4057566020413748420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_40
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 78
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce11e0325fe225760800000000000000
+      internalID: 7445064764386841068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_41
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 98
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abde1cafc26024800800000000000000
+      internalID: 595044891021667770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_42
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 85
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6129b67ca6ff66f80800000000000000
+      internalID: -8113516844584037866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_43
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 91
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e4c773cb24a4b50800000000000000
+      internalID: 6578143581880209011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_44
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 93
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90b3df263f0e4560800000000000000
+      internalID: 7299788771419205789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_45
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 77
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f5f856e6f69eb50800000000000000
+      internalID: 6622947246966005645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_46
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 87
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9848115f945cdece0800000000000000
+      internalID: -1374225389843282807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_47
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 79
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c6b087a200c4000800000000000000
+      internalID: 21392280632650772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_48
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 91
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28af951e8ae9584b0800000000000000
+      internalID: -5438766526807541118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_49
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 81
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49c4340aa2c71e00800000000000000
+      internalID: 1015494276466133327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_50
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 79
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27845db6e5b4c0b0800000000000000
+      internalID: -5709238424975407316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_51
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 81
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3c55e20571eed60800000000000000
+      internalID: 7921294427733476290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_52
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 82
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f28dda34490d19b0800000000000000
+      internalID: -5107916213718252814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_53
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 79
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0848c5fde5b80f550800000000000000
+      internalID: 6192602727225001088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_54
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 71
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e163083953936e350800000000000000
+      internalID: 6045582452062172702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_55
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 72
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2639ad5f36a9b1f0800000000000000
+      internalID: -1028608248792926676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_56
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 47
+        width: 13
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd6b3a1c16c5d310800000000000000
+      internalID: 1429266280761486813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_57
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 71
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7ae404e28c33780800000000000000
+      internalID: -8704393553804089438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_58
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 62
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e92f0d5fa9c98e800800000000000000
+      internalID: 641935136263303838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_59
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 79
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb45f17fd5c491f60800000000000000
+      internalID: 8005513779089462459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_60
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 71
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92e33d92c487bc80800000000000000
+      internalID: -8307025016265645413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_61
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 64
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b406a68e614e92b00800000000000000
+      internalID: 804424795502043211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_62
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 79
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae6f805fb823e800800000000000000
+      internalID: 640400374172184231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_63
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 83
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0265303a392d06470800000000000000
+      internalID: 8385934037700793888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_64
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 63
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9023e6dc9219f1180800000000000000
+      internalID: -9142429109812579831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_65
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 65
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962b119bfb3eb62d0800000000000000
+      internalID: -3284281090653441431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_66
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 64
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2073b14f8e1c330800000000000000
+      internalID: 3729518101565735624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_67
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 61
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0538b3ea0145f680800000000000000
+      internalID: -8721993588307118837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_68
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 69
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7967295507435d5b0800000000000000
+      internalID: -5344307725728581993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_69
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 61
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 854776214295f0ea0800000000000000
+      internalID: -5904402574996966312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_70
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 63
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21819eb2518066630800000000000000
+      internalID: 3919829412696627218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_71
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 62
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a130a6808780f80e0800000000000000
+      internalID: -2265582775913807078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_72
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 47
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d651bafb0d19bfd0800000000000000
+      internalID: -2325795795272378669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_73
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 55
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd5feeb25254bf9b0800000000000000
+      internalID: -5045362931585321509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_74
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 39
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 418236b0861a5a6d0800000000000000
+      internalID: -2979798110195996652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_75
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 45
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c92840ba2ab4650800000000000000
+      internalID: 6218242565913877523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_76
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 52
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9b456ade34678f0800000000000000
+      internalID: -543172017074685446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_77
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 46
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce7d10424464a2d90800000000000000
+      internalID: -7121802602257197076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_78
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 49
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 857a7820aac539360800000000000000
+      internalID: 7175180516587972440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_79
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 45
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9beee357d0ba59ba0800000000000000
+      internalID: -6082767647404003655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_80
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 29
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1173ce7d66aeccc0800000000000000
+      internalID: -3688828055561473762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_81
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 29
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2320810ef2975f7f0800000000000000
+      internalID: -579423730517147086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_82
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 31
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f078f869bc21f5b90800000000000000
+      internalID: -7251056209429559537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_83
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 31
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc98cc951db074c30800000000000000
+      internalID: 4343453359404779981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_84
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 31
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fa2a7ebd6db8de0800000000000000
+      internalID: -1329733024985469073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_85
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 29
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ffdc2461683ba10800000000000000
+      internalID: 1924028895985532792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_86
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 33
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b88cd0a0920eab80800000000000000
+      internalID: -8381759036292560720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_87
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 37
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b674c481c0e1cb550800000000000000
+      internalID: 6177845826141570923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_88
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 39
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eed2a81df2191650800000000000000
+      internalID: 6204010839928921828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_89
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 34
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5ba31df47e30510800000000000000
+      internalID: 1514308229725337048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_90
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 39
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e83b2c43ea266440800000000000000
+      internalID: 4928673997927430376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_91
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 9
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4970e4c86f2b61230800000000000000
+      internalID: 3609268923369654164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_92
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 33
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb423b51cfa162e50800000000000000
+      internalID: 6784139558678373563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_93
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 29
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821db09a51d048d10800000000000000
+      internalID: 2126839310707314984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_94
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 15
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 659ab1dcdf1eb1440800000000000000
+      internalID: 4907764699134404950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_95
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 17
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734afb084da66ea40800000000000000
+      internalID: 5397118664375772215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_96
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 17
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b716e2420a68210800000000000000
+      internalID: 1334930416819338030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_97
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 17
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68b0b2e0a957eff0800000000000000
+      internalID: -6938326884894612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_98
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 14
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2820acbf4ac559f50800000000000000
+      internalID: 6887513068801753730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_99
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 21
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98193b7187f017310800000000000000
+      internalID: 1400917967557071241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_100
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 13
+        width: 60
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156e35793011cc330800000000000000
+      internalID: 3732376898304730705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_101
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 17
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed7d4eead87a2a20800000000000000
+      internalID: 3038373780311080423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_102
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 5
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c9b24bb98fc1110800000000000000
+      internalID: 1233133745619049491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_103
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 21
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37b64b68f4d7bf90800000000000000
+      internalID: -6937842537524185284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_104
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 17
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335ef38b3a83e2150800000000000000
+      internalID: 5849675241822872883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_105
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 17
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b9393c012c72ea0800000000000000
+      internalID: -5897531809761879239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_106
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 17
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c025c48c22be90dd0800000000000000
+      internalID: -2519223981915221492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_107
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 14
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e637fe80424d1c3d0800000000000000
+      internalID: -3188033809967778962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_108
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 3
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489d63282572f5800800000000000000
+      internalID: 603244110416370052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEXT WORLD_109
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 0
+        width: 41
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593ae45795b09dfa0800000000000000
+      internalID: -5775572568277867627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NEXT WORLD_0: 3316192380945305006
+      NEXT WORLD_1: 2070518800336556591
+      NEXT WORLD_10: 5953054647956596586
+      NEXT WORLD_100: 3732376898304730705
+      NEXT WORLD_101: 3038373780311080423
+      NEXT WORLD_102: 1233133745619049491
+      NEXT WORLD_103: -6937842537524185284
+      NEXT WORLD_104: 5849675241822872883
+      NEXT WORLD_105: -5897531809761879239
+      NEXT WORLD_106: -2519223981915221492
+      NEXT WORLD_107: -3188033809967778962
+      NEXT WORLD_108: 603244110416370052
+      NEXT WORLD_109: -5775572568277867627
+      NEXT WORLD_11: 8986551828568428198
+      NEXT WORLD_12: -7023109790635651750
+      NEXT WORLD_13: -5675674895416943052
+      NEXT WORLD_14: 2123598814867989821
+      NEXT WORLD_15: -6986728753333192810
+      NEXT WORLD_16: 1626710167610477236
+      NEXT WORLD_17: -1015907655899413532
+      NEXT WORLD_18: 1785137097593384789
+      NEXT WORLD_19: 1267231729041598345
+      NEXT WORLD_2: 1844181253108587327
+      NEXT WORLD_20: 382847016643482813
+      NEXT WORLD_21: -6774915169359148729
+      NEXT WORLD_22: 8004414955269970181
+      NEXT WORLD_23: -8431477989553208908
+      NEXT WORLD_24: 8490279139242907129
+      NEXT WORLD_25: -686794158843314259
+      NEXT WORLD_26: -9194773293225987009
+      NEXT WORLD_27: 6387415457914702155
+      NEXT WORLD_28: -1287290189126504093
+      NEXT WORLD_29: 1917472392009750073
+      NEXT WORLD_3: -5872933634329414036
+      NEXT WORLD_30: 4522639992222243088
+      NEXT WORLD_31: -4170593672600299715
+      NEXT WORLD_32: 7443175970490165985
+      NEXT WORLD_33: 4371292551647646313
+      NEXT WORLD_34: 7244509738953732546
+      NEXT WORLD_35: -4817728146897010542
+      NEXT WORLD_36: 104212695262931329
+      NEXT WORLD_37: -5924682448382455174
+      NEXT WORLD_38: 998290746046514437
+      NEXT WORLD_39: -4057566020413748420
+      NEXT WORLD_4: -7475782181059239460
+      NEXT WORLD_40: 7445064764386841068
+      NEXT WORLD_41: 595044891021667770
+      NEXT WORLD_42: -8113516844584037866
+      NEXT WORLD_43: 6578143581880209011
+      NEXT WORLD_44: 7299788771419205789
+      NEXT WORLD_45: 6622947246966005645
+      NEXT WORLD_46: -1374225389843282807
+      NEXT WORLD_47: 21392280632650772
+      NEXT WORLD_48: -5438766526807541118
+      NEXT WORLD_49: 1015494276466133327
+      NEXT WORLD_5: -5246702153679674306
+      NEXT WORLD_50: -5709238424975407316
+      NEXT WORLD_51: 7921294427733476290
+      NEXT WORLD_52: -5107916213718252814
+      NEXT WORLD_53: 6192602727225001088
+      NEXT WORLD_54: 6045582452062172702
+      NEXT WORLD_55: -1028608248792926676
+      NEXT WORLD_56: 1429266280761486813
+      NEXT WORLD_57: -8704393553804089438
+      NEXT WORLD_58: 641935136263303838
+      NEXT WORLD_59: 8005513779089462459
+      NEXT WORLD_6: 3154694986016489182
+      NEXT WORLD_60: -8307025016265645413
+      NEXT WORLD_61: 804424795502043211
+      NEXT WORLD_62: 640400374172184231
+      NEXT WORLD_63: 8385934037700793888
+      NEXT WORLD_64: -9142429109812579831
+      NEXT WORLD_65: -3284281090653441431
+      NEXT WORLD_66: 3729518101565735624
+      NEXT WORLD_67: -8721993588307118837
+      NEXT WORLD_68: -5344307725728581993
+      NEXT WORLD_69: -5904402574996966312
+      NEXT WORLD_7: -8892371417447088552
+      NEXT WORLD_70: 3919829412696627218
+      NEXT WORLD_71: -2265582775913807078
+      NEXT WORLD_72: -2325795795272378669
+      NEXT WORLD_73: -5045362931585321509
+      NEXT WORLD_74: -2979798110195996652
+      NEXT WORLD_75: 6218242565913877523
+      NEXT WORLD_76: -543172017074685446
+      NEXT WORLD_77: -7121802602257197076
+      NEXT WORLD_78: 7175180516587972440
+      NEXT WORLD_79: -6082767647404003655
+      NEXT WORLD_8: -2598217398137570834
+      NEXT WORLD_80: -3688828055561473762
+      NEXT WORLD_81: -579423730517147086
+      NEXT WORLD_82: -7251056209429559537
+      NEXT WORLD_83: 4343453359404779981
+      NEXT WORLD_84: -1329733024985469073
+      NEXT WORLD_85: 1924028895985532792
+      NEXT WORLD_86: -8381759036292560720
+      NEXT WORLD_87: 6177845826141570923
+      NEXT WORLD_88: 6204010839928921828
+      NEXT WORLD_89: 1514308229725337048
+      NEXT WORLD_9: 4228745819756227094
+      NEXT WORLD_90: 4928673997927430376
+      NEXT WORLD_91: 3609268923369654164
+      NEXT WORLD_92: 6784139558678373563
+      NEXT WORLD_93: 2126839310707314984
+      NEXT WORLD_94: 4907764699134404950
+      NEXT WORLD_95: 5397118664375772215
+      NEXT WORLD_96: 1334930416819338030
+      NEXT WORLD_97: -6938326884894612
+      NEXT WORLD_98: 6887513068801753730
+      NEXT WORLD_99: 1400917967557071241
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
