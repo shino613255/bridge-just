@@ -8,9 +8,9 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public sealed class BridgeJustSceneManager : MonoBehaviour
 {
-    [Tooltip("Dedicated background SpriteRenderer directly under Main Camera.")]
+    [Tooltip("背景専用のSpriteRenderer。Main Cameraの直下に置く。")]
     [SerializeField] private SpriteRenderer backgroundRenderer;
-    // 旧シーンの参照との互換性を保つため、以前の表示範囲の項目だけ残している。
+    // 古いシーンの参照を壊さないために残している項目。
     [SerializeField, HideInInspector] private SpriteRenderer screenArea;
     [SerializeField] private Sprite[] backgroundThemes = new Sprite[0];
     [SerializeField, Min(1)] private int stagesPerBackground = 5;
@@ -38,33 +38,37 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
     private Quaternion originalLocalRotation;
     private Vector3 originalLocalScale;
 
-    // ステージ番号はGameManagerの成功回数から求め、ここでは別のカウンターを増やさない。
+    // ステージ番号はGameManagerの成功回数から求める。ここでは別に数えない。
     public long CurrentStage => owner != null ? (long)Math.Max(0, owner.SuccessCount) + 1L : 1L;
     public int CurrentThemeIndex { get; private set; } = -1;
     public bool IsTransitioning { get; private set; }
     public int StagesPerBackground => stagesPerBackground;
 
     /// <summary>
-    /// 背景切り替えの進捗と次の背景を取得する。
-    /// フェード中は切り替え先をプレビューし、その区切りの進捗を満タンとして返す。
+    /// 次の背景までの進み具合と、次の背景の画像を返す。
+    /// フェード中は切り替え先を次の背景とし、進み具合は満タンにする。
     /// </summary>
     public bool TryGetWorldProgress(out int completed, out int total, out Sprite next)
     {
-        completed = 0; total = stagesPerBackground; next = null;
+        completed = 0;
+        total = stagesPerBackground;
+        next = null;
         if (!prepared || owner == null || total < 1 || CurrentThemeIndex < 0
             || backgroundThemes == null || backgroundThemes.Length < 2) return false;
         long successes = Math.Max(0, owner.SuccessCount);
         int desired = CalculateThemeIndex(successes + 1L, total, backgroundThemes.Length, loopBackgrounds);
         bool completing = desired != CurrentThemeIndex;
-        int previewIndex = completing ? desired : CalculateThemeIndex((successes / total + 1L) * total + 1L,
-            total, backgroundThemes.Length, loopBackgrounds);
+        int previewIndex = completing
+            ? desired
+            : CalculateThemeIndex((successes / total + 1L) * total + 1L,
+                total, backgroundThemes.Length, loopBackgrounds);
         if (previewIndex == CurrentThemeIndex || !TryGetTheme(previewIndex, out next)) return false;
         completed = completing ? total : (int)(successes % total);
         return true;
     }
 
     /// <summary>
-    /// ステージ番号から背景配列の添字を求める。設定が不正な場合は-1を返す。
+    /// ステージ番号から背景配列の番号を求める。設定が不正なら-1を返す。
     /// </summary>
     public static int CalculateThemeIndex(long stageNumber, int stagesPerTheme, int themeCount, bool loop)
     {
@@ -74,7 +78,7 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 背景の参照と描画設定を準備する。設定が不足している場合は背景切り替えを無効にする。
+    /// 背景の参照と描画設定を準備する。設定が足りなければ背景の切り替えを無効にする。
     /// </summary>
     public void Initialize(GameManager game, CameraFollow follow, params SpriteRenderer[] foreground)
     {
@@ -110,7 +114,8 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
         fadeRenderer.gameObject.layer = backgroundRenderer.gameObject.layer;
         fadeRenderer.sharedMaterials = backgroundRenderer.sharedMaterials;
         view = cameraFollow.GetComponent<Camera>();
-        depth = Mathf.Clamp(Vector3.Dot(backgroundRenderer.transform.position - view.transform.position, view.transform.forward),
+        depth = Mathf.Clamp(
+            Vector3.Dot(backgroundRenderer.transform.position - view.transform.position, view.transform.forward),
             view.nearClipPlane + 0.05f, view.farClipPlane - 0.05f);
         backgroundRenderer.drawMode = SpriteDrawMode.Simple;
         backgroundRenderer.maskInteraction = SpriteMaskInteraction.None;
@@ -140,7 +145,7 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
         }
         else
         {
-            // 背景Aが未設定でも、前のプレイの背景を残したままにしない。
+            // 最初の背景が未設定でも、前のプレイの背景を残したままにしない。
             backgroundRenderer.sprite = originalSprite;
             backgroundRenderer.color = originalColor;
             backgroundRenderer.enabled = originalEnabled;
@@ -152,7 +157,8 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
     public void BeginSectionTransition(int successfulCrossings)
     {
         if (!prepared || !isActiveAndEnabled || owner == null
-            || (owner.CurrentState != GameManager.GameState.Scrolling && owner.CurrentState != GameManager.GameState.Transition)
+            || (owner.CurrentState != GameManager.GameState.Scrolling
+                && owner.CurrentState != GameManager.GameState.Transition)
             || successfulCrossings != owner.SuccessCount) return;
 
         int index = CalculateThemeIndex((long)Math.Max(0, successfulCrossings) + 1L,
@@ -177,7 +183,7 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 区間開始時の背景へ戻す。ステージ番号と進捗はGameManagerの成功回数に従う。
+    /// 区間開始時の背景へ戻す。
     /// </summary>
     public void RestoreRoundTheme(int index)
     {
@@ -233,11 +239,15 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
         Bounds bounds = backgroundRenderer.bounds;
         Debug.Log(prefix
             + $", sprite={backgroundRenderer.sprite?.name ?? "None"}"
-            + $", rendererEnabled={backgroundRenderer.enabled}, objectActive={backgroundRenderer.gameObject.activeInHierarchy}"
-            + $", alpha={backgroundRenderer.color.a:F3}, forceRenderingOff={backgroundRenderer.forceRenderingOff}"
-            + $", sortingLayer={backgroundRenderer.sortingLayerName}({backgroundRenderer.sortingLayerID}), order={backgroundRenderer.sortingOrder}"
+            + $", rendererEnabled={backgroundRenderer.enabled}"
+            + $", objectActive={backgroundRenderer.gameObject.activeInHierarchy}"
+            + $", alpha={backgroundRenderer.color.a:F3}"
+            + $", forceRenderingOff={backgroundRenderer.forceRenderingOff}"
+            + $", sortingLayer={backgroundRenderer.sortingLayerName}({backgroundRenderer.sortingLayerID})"
+            + $", order={backgroundRenderer.sortingOrder}"
             + $", maskInteraction={backgroundRenderer.maskInteraction}, fullViewport=True"
-            + $", cameraIncludesLayer={cameraIncludesLayer}, worldCenter={bounds.center}, worldSize={bounds.size}", this);
+            + $", cameraIncludesLayer={cameraIncludesLayer}"
+            + $", worldCenter={bounds.center}, worldSize={bounds.size}", this);
     }
 
     public void CancelTransition()
@@ -255,7 +265,8 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
 
     private bool TryGetTheme(int index, out Sprite sprite)
     {
-        sprite = backgroundThemes != null && index >= 0 && index < backgroundThemes.Length ? backgroundThemes[index] : null;
+        sprite = backgroundThemes != null && index >= 0 && index < backgroundThemes.Length
+            ? backgroundThemes[index] : null;
         return sprite != null && sprite.bounds.size.x > 0f && sprite.bounds.size.y > 0f;
     }
 
@@ -275,12 +286,24 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
             foreach (SpriteRenderer item in foreground)
             {
                 if (item == null) continue;
-                if (item == backgroundRenderer) { error = "Do not assign a gameplay renderer as background."; return false; }
-                if (back == null || SortingLayer.GetLayerValueFromID(item.sortingLayerID) < SortingLayer.GetLayerValueFromID(back.sortingLayerID)
-                    || (item.sortingLayerID == back.sortingLayerID && item.sortingOrder < back.sortingOrder)) back = item;
+                if (item == backgroundRenderer)
+                {
+                    error = "Do not assign a gameplay renderer as background.";
+                    return false;
+                }
+                if (back == null
+                    || SortingLayer.GetLayerValueFromID(item.sortingLayerID)
+                        < SortingLayer.GetLayerValueFromID(back.sortingLayerID)
+                    || (item.sortingLayerID == back.sortingLayerID && item.sortingOrder < back.sortingOrder))
+                    back = item;
             }
-            if (back == null || back.sortingOrder < -32766) error = "No valid sorting order is available behind gameplay.";
-            else { backgroundLayer = back.sortingLayerID; backgroundOrder = back.sortingOrder - 2; }
+            if (back == null || back.sortingOrder < -32766)
+                error = "No valid sorting order is available behind gameplay.";
+            else
+            {
+                backgroundLayer = back.sortingLayerID;
+                backgroundOrder = back.sortingOrder - 2;
+            }
         }
         return error == null;
     }
@@ -307,7 +330,7 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
         renderer.transform.rotation = view.transform.rotation;
         SetWorldScale(renderer.transform, new Vector3(scale, scale, 1f));
         Vector3 center = view.transform.position + view.transform.forward * depth;
-        // 画像の中心を表示領域に合わせる。Pivotが中央以外でも画像のBoundsを基準にする。
+        // Pivotが中央でなくても、画像の中心が画面の中心に来るようにする。
         renderer.transform.position += center - renderer.bounds.center;
     }
 
@@ -315,7 +338,8 @@ public sealed class BridgeJustSceneManager : MonoBehaviour
     {
         Vector3 parent = item.parent.lossyScale;
         if (parent.x == 0f || parent.y == 0f || parent.z == 0f) return;
-        item.localScale = new Vector3(worldScale.x / parent.x, worldScale.y / parent.y, worldScale.z / parent.z);
+        item.localScale = new Vector3(
+            worldScale.x / parent.x, worldScale.y / parent.y, worldScale.z / parent.z);
     }
 
     private void OnDisable() => CancelTransition();

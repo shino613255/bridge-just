@@ -2,19 +2,19 @@ using System;
 using UnityEngine;
 
 /// <summary>
-/// 親Circleを指定された経路に沿って移動させ、移動距離に応じて転がし、到着を1回通知する。
-/// GameManagerが経路と開始タイミングを決め、このクラスは実際の移動を担当する。
+/// 親Circleを経路に沿って動かし、進んだ距離に応じて転がし、到着を1回だけ知らせる。
+/// 経路と開始のタイミングはGameManagerが決める。
 /// </summary>
 [DisallowMultipleComponent]
 public sealed class CharacterMover : MonoBehaviour
 {
     [SerializeField, Min(0.01f)] private float moveSpeed = 3f;
 
-    [Header("Rolling")]
-    [Tooltip("1 = natural rolling from distance/radius; 0 = no rotation. Does not affect movement speed.")]
+    [Header("転がり")]
+    [Tooltip("1で進んだ距離どおりに自然に転がる。0で回転しない。移動の速さには影響しない。")]
     [SerializeField, Min(0f)] private float rotationMultiplier = 1f;
 
-    // 到着時の通知。GameManagerはこの通知を受けて加点するため、移動中にはスコアが増えない。
+    // 到着の通知。GameManagerはこれを受けて加点するので、移動中はスコアが増えない。
     public event Action CrossingFinished;
     public bool IsCrossing { get; private set; }
     public float InitialX => initialPosition.x;
@@ -35,8 +35,8 @@ public sealed class CharacterMover : MonoBehaviour
         initialPosition = transform.position;
         initialRotation = transform.rotation;
 
-        // 顔を含めず、丸本体のローカルBoundsとScaleから半径を求める。
-        // 回転すると変わるワールドの外接矩形を使わず、プレイ中は一定の半径を保つ。
+        // 半径は顔を含めず、丸い本体の大きさから求める。
+        // 回転で変わるワールドの外接矩形は使わず、プレイ中は同じ半径を使う。
         SpriteRenderer body = GetComponent<SpriteRenderer>();
         if (body != null && body.sprite != null)
         {
@@ -45,7 +45,8 @@ public sealed class CharacterMover : MonoBehaviour
 
         if (!IsFinite(rollingRadius) || rollingRadius <= 0f)
         {
-            Debug.LogWarning("[BridgeJust] CharacterMover: Circle needs its own SpriteRenderer with positive width for rolling. Movement will continue without rotation.", this);
+            Debug.LogWarning("[BridgeJust] CharacterMover: Circle needs its own SpriteRenderer "
+                + "with positive width for rolling. Movement will continue without rotation.", this);
         }
     }
 
@@ -62,15 +63,16 @@ public sealed class CharacterMover : MonoBehaviour
         return BeginCross(points, Vector3.right);
     }
 
-    // 経路が正しいか確認してからコピーする。移動中に呼び出し元が配列を書き換えても経路が変わらない。
-    // forwardAxisへの内積で「前へ進んでいるか」を調べるので、斜めの経路にも対応できる。
+    // 経路を確認してからコピーする。呼び出し元があとで配列を書き換えても経路は変わらない。
+    // forwardAxis方向に後戻りしていないかを見るので、斜めの経路にも使える。
     public bool BeginCross(Vector3[] points, Vector3 forwardAxis)
     {
         if (!isActiveAndEnabled || IsCrossing || !HasValidSpeed || points == null || points.Length == 0
             || !IsFinite(forwardAxis.x) || !IsFinite(forwardAxis.y) || !IsFinite(forwardAxis.z)
             || forwardAxis.sqrMagnitude < 0.5f)
         {
-            Debug.LogError("[BridgeJust] CharacterMover: Enable Circle, set a positive Move Speed, and use a destination to its right.", this);
+            Debug.LogError("[BridgeJust] CharacterMover: Enable Circle, set a positive Move Speed, "
+                + "and use a destination to its right.", this);
             return false;
         }
 
@@ -90,7 +92,6 @@ public sealed class CharacterMover : MonoBehaviour
         return true;
     }
 
-    // 毎フレーム、今回使える移動距離だけ経路を進み、進んだ実距離を回転へ反映する。
     private void Update()
     {
         if (!IsCrossing)
@@ -105,14 +106,13 @@ public sealed class CharacterMover : MonoBehaviour
             return;
         }
 
-        // 1フレームで進める距離を経路上の複数の点に分配する。
-        // 点に着くたびに余りを次の点へ使うため、細かい曲線でも点ごとに停止しない。
+        // 1フレームで進める距離を、経路の点から点へ順に使っていく。
+        // 点に着いたら余りを次の点へ回すので、細かい曲線でも点ごとに止まらない。
         float remaining = moveSpeed * Time.deltaTime;
         while (IsCrossing)
         {
             Vector3 previous = transform.position;
             Vector3 next = Vector3.MoveTowards(previous, destination, remaining);
-            // Vector3の等値比較には微小な許容差があるため、到着とみなしたら終点の座標を正確に代入する。
             transform.position = next == destination ? destination : next;
             float travelled = Vector3.Distance(previous, transform.position);
             ApplyRolling(travelled);
@@ -127,13 +127,13 @@ public sealed class CharacterMover : MonoBehaviour
             {
                 IsCrossing = false;
                 path = null;
-                // 先に移動中フラグと経路を解除し、最後に到着を通知する。これにより通知は横断1回につき1回になる。
+                // 移動中の状態を解除してから通知するので、通知は1回の横断につき1回だけ。
                 CrossingFinished?.Invoke();
             }
         }
     }
 
-    // 円が転がる距離は半径×角度なので、その逆算で回転量を求める。倍率は見た目の回転だけに作用する。
+    // 回転角 = 移動距離 ÷ 半径。右へ転がるときは時計回り（マイナスの角度）。
     private void ApplyRolling(float distance)
     {
         if (!IsFinite(rollingRadius) || rollingRadius <= 0f
@@ -142,7 +142,6 @@ public sealed class CharacterMover : MonoBehaviour
             return;
         }
 
-        // 回転角は「移動距離÷半径」で求める。ラジアンを度に直し、右へ転がる時計回りを負の角度で表す。
         float degrees = -(distance / rollingRadius) * Mathf.Rad2Deg * rotationMultiplier;
         if (IsFinite(degrees))
         {
@@ -150,7 +149,7 @@ public sealed class CharacterMover : MonoBehaviour
         }
     }
 
-    // 最初からのRetry用に、経路を捨てて位置と回転を起動時の姿勢へ戻す。
+    // 最初からのRetry用に、起動時の位置と回転へ戻す。
     public void ResetCharacter()
     {
         IsCrossing = false;
@@ -159,7 +158,7 @@ public sealed class CharacterMover : MonoBehaviour
         transform.rotation = initialRotation;
     }
 
-    // 落下演出や途中再開へ制御を渡すため、位置と回転を保ったまま横断だけを中止する。
+    // 位置と回転はそのままで、横断だけを止める。
     public void CancelCrossing()
     {
         IsCrossing = false;
@@ -167,7 +166,7 @@ public sealed class CharacterMover : MonoBehaviour
     }
 
     /// <summary>
-    /// 区間移行中にワールド全体の位置をずらす。転がった角度は初期化しない。
+    /// ワールド全体を動かすときに使う。転がった角度は戻さない。
     /// </summary>
     public void ShiftWorldX(float delta)
     {
@@ -181,7 +180,7 @@ public sealed class CharacterMover : MonoBehaviour
         destination += delta;
     }
 
-    // 横断中ではないときだけ外部から位置を調整する。回転角は保つため、区間移行で回転が急に戻らない。
+    // 横断中でなければ位置を直接置く。回転は変えないので、区間の切り替えで向きが急に戻らない。
     public void PlaceAtStart(Vector3 position)
     {
         if (!IsCrossing) transform.position = position;

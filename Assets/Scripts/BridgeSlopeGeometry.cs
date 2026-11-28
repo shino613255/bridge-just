@@ -9,22 +9,31 @@ using UnityEngine;
 /// </summary>
 public static class BridgeSlopeGeometry
 {
-    // Axisは足場に沿う接線、Normalはそこから上へ直角に伸びる法線。どちらも長さ1のベクトル。
+    // Axisは足場に沿う向き、Normalはそこから上へ直角に伸びる向き。どちらも長さ1。
     public const float AngleDegrees = 15f;
     public static Vector3 Axis(float angle) => Quaternion.Euler(0f, 0f, angle) * Vector3.right;
     public static Vector3 Normal(float angle) => Quaternion.Euler(0f, 0f, angle) * Vector3.up;
-    // Sprite内の座標をTransformPointでワールド座標へ変換し、回転・Scale・Pivotの違いを反映する。
-    public static Vector3 TopLeft(SpriteRenderer r) => r.transform.TransformPoint(new Vector3(r.localBounds.min.x, r.localBounds.max.y, r.localBounds.center.z));
-    public static Vector3 TopRight(SpriteRenderer r) => r.transform.TransformPoint(new Vector3(r.localBounds.max.x, r.localBounds.max.y, r.localBounds.center.z));
+
+    // Spriteの角をワールド座標で返す。回転・Scale・Pivotの違いも反映される。
+    public static Vector3 TopLeft(SpriteRenderer r) => r.transform.TransformPoint(
+        new Vector3(r.localBounds.min.x, r.localBounds.max.y, r.localBounds.center.z));
+
+    public static Vector3 TopRight(SpriteRenderer r) => r.transform.TransformPoint(
+        new Vector3(r.localBounds.max.x, r.localBounds.max.y, r.localBounds.center.z));
+
     public static Vector3 TopCenter(SpriteRenderer r) => (TopLeft(r) + TopRight(r)) * 0.5f;
-    public static Vector3 BottomLeft(SpriteRenderer r) => r.transform.TransformPoint(new Vector3(r.localBounds.min.x, r.localBounds.min.y, r.localBounds.center.z));
-    public static Vector3 BottomRight(SpriteRenderer r) => r.transform.TransformPoint(new Vector3(r.localBounds.max.x, r.localBounds.min.y, r.localBounds.center.z));
+
+    public static Vector3 BottomLeft(SpriteRenderer r) => r.transform.TransformPoint(
+        new Vector3(r.localBounds.min.x, r.localBounds.min.y, r.localBounds.center.z));
+
+    public static Vector3 BottomRight(SpriteRenderer r) => r.transform.TransformPoint(
+        new Vector3(r.localBounds.max.x, r.localBounds.min.y, r.localBounds.center.z));
+
     public static Vector3 BottomCenter(SpriteRenderer r) => (BottomLeft(r) + BottomRight(r)) * 0.5f;
     public static float Thickness(SpriteRenderer r) => Vector3.Distance(TopCenter(r), BottomCenter(r));
     public static float Length(SpriteRenderer r) => Vector3.Distance(TopLeft(r), TopRight(r));
 
-    // 端点を軸へ投影して、小さい距離と大きい距離の組にする。
-    // Vector3.Dot(点−原点, 単位軸)は、その点が原点から軸方向に何単位離れたかを表す。
+    // 上面の両端を軸へ投影し、原点からの距離の範囲（小さい方, 大きい方）にする。
     public static Vector2 Interval(SpriteRenderer r, Vector3 origin, Vector3 axis)
     {
         float a = Vector3.Dot(TopLeft(r) - origin, axis);
@@ -32,7 +41,7 @@ public static class BridgeSlopeGeometry
         return new Vector2(Mathf.Min(a, b), Mathf.Max(a, b));
     }
 
-    // 橋を足場の上に載せるため、判定に使う橋の端は下面側から取得する。
+    // 橋は足場の上に載せるので、判定に使う橋の端は下面側から取る。
     public static Vector2 BottomInterval(SpriteRenderer r, Vector3 origin, Vector3 axis)
     {
         float a = Vector3.Dot(BottomLeft(r) - origin, axis);
@@ -40,17 +49,18 @@ public static class BridgeSlopeGeometry
         return new Vector2(Mathf.Min(a, b), Mathf.Max(a, b));
     }
 
-    // 2区間の交差長は「右端の小さい方−左端の大きい方」。離れていれば負になるので0へ丸める。
-    public static float Overlap(Vector2 a, Vector2 b) => Mathf.Max(0f, Mathf.Min(a.y, b.y) - Mathf.Max(a.x, b.x));
+    // 2つの範囲が重なっている長さ。離れていれば0。
+    public static float Overlap(Vector2 a, Vector2 b)
+        => Mathf.Max(0f, Mathf.Min(a.y, b.y) - Mathf.Max(a.x, b.x));
 
-    // 回転後の左上端と目標点の差を平行移動へ加え、接続点を正確に一致させる。
+    // 回転したあと、左上端が目標点にぴったり重なるように動かす。
     public static void PlaceTopLeft(SpriteRenderer r, Vector3 point, float angle)
     {
         r.transform.rotation = Quaternion.Euler(0f, 0f, angle);
         r.transform.position += point - TopLeft(r);
     }
 
-    // 上面中心を保存してから回転し、中心のずれを戻すことで、支持点を固定したまま傾ける。
+    // 上面の中心を動かさずに傾ける。
     public static void RotateAroundTopCenter(SpriteRenderer r, float angle)
     {
         Vector3 center = TopCenter(r);
@@ -58,16 +68,17 @@ public static class BridgeSlopeGeometry
         r.transform.position += center - TopCenter(r);
     }
 
-    // 2本の支持面をキャラクターの半径だけ外側にずらした直線の交点を求める。
-    // 異なる傾斜の間でも、キャラクターの中心が急に飛ばずに角を回れる位置になる。
+    // 傾斜が変わる角で、キャラクターの中心が急に飛ばずに角を回れる位置を求める。
     public static Vector3 CornerCenter(Vector3 corner, Vector3 oldNormal, Vector3 newNormal, float clearance)
     {
-        return corner + (oldNormal + newNormal) * (clearance / (1f + Vector3.Dot(oldNormal, newNormal)));
+        return corner + (oldNormal + newNormal)
+            * (clearance / (1f + Vector3.Dot(oldNormal, newNormal)));
     }
 
     public static Vector3 PointAfterTurn(SpriteRenderer platform, Vector3 point, Vector3 pivot, float angle)
     {
-        Quaternion turn = Quaternion.Euler(0f, 0f, angle) * Quaternion.Inverse(platform.transform.rotation);
+        Quaternion turn = Quaternion.Euler(0f, 0f, angle)
+            * Quaternion.Inverse(platform.transform.rotation);
         return pivot + turn * (point - pivot);
     }
 
@@ -80,12 +91,11 @@ public static class BridgeSlopeGeometry
     /// <summary>
     /// 橋の端での乗り上がり・降りを含め、実際の表面を通る連続した経路を求める。
     /// </summary>
-    public static Vector3[] BoardCrossingPath(SpriteRenderer left, SpriteRenderer right, SpriteRenderer board,
-        Vector3 start, float clearance)
+    public static Vector3[] BoardCrossingPath(SpriteRenderer left, SpriteRenderer right,
+        SpriteRenderer board, Vector3 start, float clearance)
     {
         return new BridgeBoardSurface(left, board).CrossingPath(left, right, start, clearance);
     }
-
 
     public static float BoardSupportLift(float horizontalDistance, float thickness, float clearance)
     {
@@ -94,19 +104,19 @@ public static class BridgeSlopeGeometry
             clearance * clearance - horizontalDistance * horizontalDistance)) - clearance);
     }
 
-    // 円が板の角へ接触し始める水平距離。半径・板の厚みから三平方の定理で求める。
+    // 円が板の角に触れ始める水平距離。半径と板の厚みから三平方の定理で求める。
     public static float StepApproachDistance(float thickness, float clearance)
     {
         return thickness <= clearance
-            ? Mathf.Sqrt(Mathf.Max(0f, clearance * clearance - (clearance - thickness) * (clearance - thickness)))
+            ? Mathf.Sqrt(Mathf.Max(0f,
+                clearance * clearance - (clearance - thickness) * (clearance - thickness)))
             : clearance;
     }
 }
 
 /// <summary>
 /// 1区間の橋を、接続点からの距離と高さで表す。
-/// 傾斜が変わる接続部では、古い足場に重なる部分だけをその足場の上面へ沿わせる。
-/// 判定用に投影した橋の区間は保ち、このデータを描画とキャラクターの接地計算で共有する。
+/// 判定・描画・キャラクターの接地計算で、このデータを共有する。
 /// </summary>
 public struct BridgeBoardSurface
 {
@@ -118,8 +128,8 @@ public struct BridgeBoardSurface
     public float Cosine => Vector3.Dot(LeftAxis, Axis);
     public bool Bent => Cosine < 0.9999f;
 
-    // 左足場の右上端を区間原点にし、橋側と足場側それぞれの接線・法線を保存する。
-    // 傾斜が異なる接続部も、1つの座標系へ変換して処理できる。
+    // 左足場の右上端を原点にし、橋側と足場側それぞれの向きを保存する。
+    // 傾斜が異なる接続部も、1つの座標系で処理できる。
     public BridgeBoardSurface(SpriteRenderer left, SpriteRenderer board)
     {
         Origin = BridgeSlopeGeometry.TopRight(left);
@@ -128,7 +138,8 @@ public struct BridgeBoardSurface
         LeftAxis = left.transform.right;
         LeftNormal = left.transform.up;
         Vector2 span = BridgeSlopeGeometry.BottomInterval(board, Origin, Axis);
-        Min = span.x; Max = span.y;
+        Min = span.x;
+        Max = span.y;
         Height = BridgeSlopeGeometry.Thickness(board);
         var library = board.GetComponent<BridgeSkinLibrary>();
         Skin = library != null ? library.Active : null;
@@ -136,49 +147,65 @@ public struct BridgeBoardSurface
         SkinMaterial = library != null ? library.SkinMaterial : null;
     }
 
-    // ワールド座標を「橋に沿う距離・橋からの高さ」へ変換する。Worldはその逆変換。
-    public Vector2 Coordinates(Vector3 world) => new Vector2(Vector3.Dot(world - Origin, Axis), Vector3.Dot(world - Origin, Normal));
+    // ワールド座標を「橋に沿う距離, 橋からの高さ」へ変換する。Worldはその逆。
+    public Vector2 Coordinates(Vector3 world) => new Vector2(
+        Vector3.Dot(world - Origin, Axis),
+        Vector3.Dot(world - Origin, Normal));
+
     public Vector3 World(Vector2 p) => Origin + Axis * p.x + Normal * p.y;
 
     // 古い足場に乗る部分だけを折り曲げる。
-    // 傾斜方向への投影距離を保つことで、見た目をつないでも成功判定の長さは変えない。
+    // 傾斜方向への投影距離は変えないので、見た目をつないでも成功判定の長さは変わらない。
     public Vector3 SkinPoint(Vector2 pixel)
     {
-        float s=Min+Skin.PixelToSpan(pixel.x,Max-Min,SkinMaximumLength);
-        float n=Skin.PixelHeight(pixel,Max-Min,SkinMaximumLength);
-        if(s<0f) n+=s*Vector3.Dot(LeftAxis,Normal)/Cosine;
-        return World(new Vector2(s,n));
+        float s = Min + Skin.PixelToSpan(pixel.x, Max - Min, SkinMaximumLength);
+        float n = Skin.PixelHeight(pixel, Max - Min, SkinMaximumLength);
+        if (s < 0f) n += s * Vector3.Dot(LeftAxis, Normal) / Cosine;
+        return World(new Vector2(s, n));
     }
 
     private Vector2 SkinCoordinates(Vector2 pixel) => Coordinates(SkinPoint(pixel));
 
-    // 足場の折れ目と伸縮橋の装飾端を、形状と画像の両方で同じ位置に区切る。
-    // 境界をまたいで補間すると角や固定端の位置が丸められるため。
-    private float NextSkinKnot(float from,float to)
+    // 足場の折れ目と伸縮橋の飾りの端で区切る。
+    // 境界をまたいで補間すると、角や固定端の位置が丸められてしまうため。
+    private float NextSkinKnot(float from, float to)
     {
-        float next=to;
-        void Test(float x){if(x>from+0.00001f&&x<next)next=x;}
-        Test(Skin.SpanToPixel(-Min,Max-Min,SkinMaximumLength));
-        if(Skin.motion==BridgeSkinMotion.RightAnchoredExtension){Test(Skin.leftFoot.x+Skin.endCaps.x);Test(Skin.rightFoot.x-Skin.endCaps.y);}
+        float next = to;
+        void Test(float x) { if (x > from + 0.00001f && x < next) next = x; }
+        Test(Skin.SpanToPixel(-Min, Max - Min, SkinMaximumLength));
+        if (Skin.motion == BridgeSkinMotion.RightAnchoredExtension)
+        {
+            Test(Skin.leftFoot.x + Skin.endCaps.x);
+            Test(Skin.rightFoot.x - Skin.endCaps.y);
+        }
         return next;
     }
 
-    // 実際に体を支える橋の表面を、区間座標の図形として作る。スキン・傾斜反転・接続の角もここで反映する。
+    // キャラクターを支える橋の表面を、区間座標の図形として作る。
     public Vector2[][] Polygons()
     {
-        if(Skin!=null)
+        if (Skin != null)
         {
-            var edges=new List<Vector2[]>(Skin.topSurface.Length+5);
-            Vector2 a=Skin.leftFoot;
-            for(int i=0;i<=Skin.topSurface.Length;i++) {
-                Vector2 b=i<Skin.topSurface.Length?Skin.topSurface[i]:Skin.rightFoot;
-                float x=a.x;
-                do {float next=NextSkinKnot(x,b.x);Vector2 p=Vector2.Lerp(a,b,Mathf.InverseLerp(a.x,b.x,x));
-                    Vector2 q=Vector2.Lerp(a,b,Mathf.InverseLerp(a.x,b.x,next));
-                    if(a.x==b.x){p=a;q=b;}
-                    edges.Add(new[]{SkinCoordinates(p),SkinCoordinates(q)});x=next;
-                }while(x<b.x-0.00001f);
-                a=b;
+            var edges = new List<Vector2[]>(Skin.topSurface.Length + 5);
+            Vector2 a = Skin.leftFoot;
+            for (int i = 0; i <= Skin.topSurface.Length; i++)
+            {
+                Vector2 b = i < Skin.topSurface.Length ? Skin.topSurface[i] : Skin.rightFoot;
+                float x = a.x;
+                do
+                {
+                    float next = NextSkinKnot(x, b.x);
+                    Vector2 p = Vector2.Lerp(a, b, Mathf.InverseLerp(a.x, b.x, x));
+                    Vector2 q = Vector2.Lerp(a, b, Mathf.InverseLerp(a.x, b.x, next));
+                    if (a.x == b.x)
+                    {
+                        p = a;
+                        q = b;
+                    }
+                    edges.Add(new[] { SkinCoordinates(p), SkinCoordinates(q) });
+                    x = next;
+                } while (x < b.x - 0.00001f);
+                a = b;
             }
             return edges.ToArray();
         }
@@ -186,20 +213,27 @@ public struct BridgeBoardSurface
         Vector2[] Rectangle(float from, float to, Vector3 axis, Vector3 normal)
         {
             Vector3 a = shape.Origin + axis * from, b = shape.Origin + axis * to;
-            return new[] { shape.Coordinates(a), shape.Coordinates(b), shape.Coordinates(b + normal * shape.Height), shape.Coordinates(a + normal * shape.Height) };
+            return new[]
+            {
+                shape.Coordinates(a),
+                shape.Coordinates(b),
+                shape.Coordinates(b + normal * shape.Height),
+                shape.Coordinates(a + normal * shape.Height)
+            };
         }
         if (!Bent) return new[] { Rectangle(Min, Max, Axis, Normal) };
         var polygons = new List<Vector2[]>(3);
-        if (Min < 0f) polygons.Add(Rectangle(Min / Cosine, Mathf.Min(Max, 0f) / Cosine, LeftAxis, LeftNormal));
+        if (Min < 0f)
+            polygons.Add(Rectangle(Min / Cosine, Mathf.Min(Max, 0f) / Cosine, LeftAxis, LeftNormal));
         if (Max > 0f) polygons.Add(Rectangle(Mathf.Max(Min, 0f), Max, Axis, Normal));
-        // 傾斜が変わる上面の2点を三角形で埋め、接続部に尖った突起ができるのを防ぐ。
+        // 傾斜が変わる所を三角形で埋め、接続部に尖った突起ができないようにする。
         if (Min < 0f && Max > 0f)
             polygons.Add(new[] { Vector2.zero, Coordinates(Origin + LeftNormal * Height), new Vector2(0f, Height) });
         return polygons.ToArray();
     }
 
-    // 円の半径を考慮して、表面に触れられる中心の高さを求める。
-    // 各辺と端点が要求する高さの最大値を採用すると、山・谷・板の端にもめり込まない。
+    // 半径radiusの円が表面に乗るときの、中心の高さを求める。
+    // 各辺と各頂点が要求する高さの最大値を取るので、山・谷・板の端にもめり込まない。
     public static float SupportHeight(Vector2[][] polygons, float s, float radius)
     {
         float height = float.NegativeInfinity;
@@ -208,14 +242,14 @@ public struct BridgeBoardSurface
             for (int i = 0; i < polygon.Length; i++)
             {
                 Vector2 a = polygon[i], b = polygon[(i + 1) % polygon.Length];
-                // 円と端点が接するとき、中心の高さは「端点の高さ＋√(半径²−横の距離²)」になる。
+                // 頂点に触れるときの中心の高さ = 頂点の高さ + √(半径² − 横の距離²)
                 float dx = s - a.x;
                 if (Mathf.Abs(dx) <= radius)
                     height = Mathf.Max(height, a.y + Mathf.Sqrt(Mathf.Max(0f, radius * radius - dx * dx)));
                 if (b.x < a.x) { Vector2 swap = a; a = b; b = swap; }
                 float length = Vector2.Distance(a, b);
                 if (length < 0.000001f || b.x - a.x < 0.000001f) continue;
-                // 辺の上を転がる中心は、辺を法線方向へ半径ぶん平行移動した線上にある。
+                // 辺の上を転がるときの中心は、辺を半径分だけ外側へずらした線の上にある。
                 Vector2 tangent = (b - a) / length;
                 Vector2 offset = new Vector2(-tangent.y, tangent.x) * radius;
                 float along = (s - a.x - offset.x) / tangent.x;
@@ -226,63 +260,94 @@ public struct BridgeBoardSurface
         return height;
     }
 
-    // 橋が待機中の体の下へ来たとき、体を持ち上げるための支持高さを求める。元の高さより下へは押し込まない。
+    // 待機中のキャラの下に橋が来たとき、体を持ち上げる高さ。元の高さより下へは押し込まない。
     public float WaitingHeight(Vector3 position, float radius)
     {
         Vector2 p = Coordinates(position);
-        if(Skin!=null)
+        if (Skin != null)
         {
-            float h=float.NegativeInfinity;
-            Vector2 a=SkinCoordinates(Skin.leftFoot);
-            for(int i=0;i<=Skin.topSurface.Length;i++) {
-                Vector2 start=i==0?Skin.leftFoot:Skin.topSurface[i-1];
-                Vector2 end=i<Skin.topSurface.Length?Skin.topSurface[i]:Skin.rightFoot;
-                float x=start.x;
-                do {float next=NextSkinKnot(x,end.x);Vector2 pixel=Vector2.Lerp(start,end,Mathf.InverseLerp(start.x,end.x,next));
-                    if(start.x==end.x)pixel=end;
-                    Vector2 b=SkinCoordinates(pixel);h=Mathf.Max(h,SegmentSupportHeight(a,b,p.x,radius));a=b;x=next;
-                }while(x<end.x-0.00001f);
+            float h = float.NegativeInfinity;
+            Vector2 a = SkinCoordinates(Skin.leftFoot);
+            for (int i = 0; i <= Skin.topSurface.Length; i++)
+            {
+                Vector2 start = i == 0 ? Skin.leftFoot : Skin.topSurface[i - 1];
+                Vector2 end = i < Skin.topSurface.Length ? Skin.topSurface[i] : Skin.rightFoot;
+                float x = start.x;
+                do
+                {
+                    float next = NextSkinKnot(x, end.x);
+                    Vector2 pixel = Vector2.Lerp(start, end, Mathf.InverseLerp(start.x, end.x, next));
+                    if (start.x == end.x) pixel = end;
+                    Vector2 b = SkinCoordinates(pixel);
+                    h = Mathf.Max(h, SegmentSupportHeight(a, b, p.x, radius));
+                    a = b;
+                    x = next;
+                } while (x < end.x - 0.00001f);
             }
-            return Mathf.Max(p.y,h);
+            return Mathf.Max(p.y, h);
         }
         return Mathf.Max(p.y, SupportHeight(Polygons(), p.x, radius));
     }
 
-    private static float SegmentSupportHeight(Vector2 a,Vector2 b,float s,float radius)
+    private static float SegmentSupportHeight(Vector2 a, Vector2 b, float s, float radius)
     {
-        float h=float.NegativeInfinity;
-        foreachEnd(a);foreachEnd(b);
-        void foreachEnd(Vector2 p) { float dx=s-p.x; if(Mathf.Abs(dx)<=radius) h=Mathf.Max(h,p.y+Mathf.Sqrt(Mathf.Max(0,radius*radius-dx*dx))); }
-        if(b.x<a.x) {var swap=a;a=b;b=swap;}
-        float length=Vector2.Distance(a,b);
-        if(length>0.000001f && b.x-a.x>0.000001f) {
-            Vector2 t=(b-a)/length, offset=new Vector2(-t.y,t.x)*radius;
-            float along=(s-a.x-offset.x)/t.x;
-            if(along>=0&&along<=length)h=Mathf.Max(h,a.y+offset.y+t.y*along);
+        float h = float.NegativeInfinity;
+        foreachEnd(a);
+        foreachEnd(b);
+        void foreachEnd(Vector2 p)
+        {
+            float dx = s - p.x;
+            if (Mathf.Abs(dx) <= radius)
+                h = Mathf.Max(h, p.y + Mathf.Sqrt(Mathf.Max(0, radius * radius - dx * dx)));
+        }
+        if (b.x < a.x)
+        {
+            var swap = a;
+            a = b;
+            b = swap;
+        }
+        float length = Vector2.Distance(a, b);
+        if (length > 0.000001f && b.x - a.x > 0.000001f)
+        {
+            Vector2 t = (b - a) / length, offset = new Vector2(-t.y, t.x) * radius;
+            float along = (s - a.x - offset.x) / t.x;
+            if (along >= 0 && along <= length) h = Mathf.Max(h, a.y + offset.y + t.y * along);
         }
         return h;
     }
 
-    // 右足場の中央または橋端を越えた位置を着地点として求め、共通の経路作成処理へ渡す。
+    // 右足場の中央か、橋の端を越えた位置を着地点にして経路を作る。
     public Vector3[] CrossingPath(SpriteRenderer left, SpriteRenderer right, Vector3 start, float radius)
     {
         if (radius <= 0f || Cosine < 0.5f) return null;
         Vector2 landing = BridgeSlopeGeometry.Interval(right, Origin, Axis);
         float end = Mathf.Max((landing.x + landing.y) * 0.5f,
-            Max + (Skin!=null ? radius+0.005f : BridgeSlopeGeometry.StepApproachDistance(Height, radius)));
+            Max + (Skin != null
+                ? radius + 0.005f
+                : BridgeSlopeGeometry.StepApproachDistance(Height, radius)));
         if (end <= Coordinates(start).x || end > landing.y - 0.001f) return null;
         return PathToSurfacePosition(left, right, start, radius, end);
     }
 
     /// <summary>
-    /// 指定した終点まで、キャラクターの半径に合う表面経路を作る。子供が左へ合流する経路にも使う。
+    /// 指定した終点まで、キャラクターの半径に合う表面経路を作る。子供が合流する経路にも使う。
     /// </summary>
-    public Vector3[] PathToSurfacePosition(SpriteRenderer left, SpriteRenderer right, Vector3 start, float radius, float end)
+    public Vector3[] PathToSurfacePosition(SpriteRenderer left, SpriteRenderer right,
+        Vector3 start, float radius, float end)
     {
         if (radius <= 0f || Cosine < 0.5f) return null;
-        var polygons = new List<Vector2[]>(Polygons()) {
-            new[] { Coordinates(BridgeSlopeGeometry.TopLeft(left)), Coordinates(BridgeSlopeGeometry.TopRight(left)) },
-            new[] { Coordinates(BridgeSlopeGeometry.TopLeft(right)), Coordinates(BridgeSlopeGeometry.TopRight(right)) }
+        var polygons = new List<Vector2[]>(Polygons())
+        {
+            new[]
+            {
+                Coordinates(BridgeSlopeGeometry.TopLeft(left)),
+                Coordinates(BridgeSlopeGeometry.TopRight(left))
+            },
+            new[]
+            {
+                Coordinates(BridgeSlopeGeometry.TopLeft(right)),
+                Coordinates(BridgeSlopeGeometry.TopRight(right))
+            }
         };
         Vector2[][] solids = polygons.ToArray();
         Vector2 first = Coordinates(start);
@@ -291,7 +356,8 @@ public struct BridgeBoardSurface
         var points = new List<Vector3>();
         Vector3 origin = Origin, axis = Axis, normal = Normal;
         bool detailedSkin = Skin != null;
-        // 経路上の1点を作る局所関数。指定距離sで必要な中心高さを調べ、ワールド座標へ戻す。
+
+        // 距離sの位置で、表面に乗るキャラの中心をワールド座標で返す。
         Vector3 At(float s)
         {
             float height = SupportHeight(solids, s, radius);
@@ -299,25 +365,27 @@ public struct BridgeBoardSurface
             p.z = start.z;
             return p;
         }
-        // 曲がりが大きい区間だけ細かく分割し、直線でつないだ経路と実際の表面との差を抑える。
+
+        // 表面の曲がりが大きい所だけ細かく分割し、直線でつないだ経路と表面のずれを抑える。
         void Segment(float a, Vector3 pa, float b, Vector3 pb, int depth)
         {
             float middle = (a + b) * 0.5f;
             Vector3 pm = At(middle);
-            // 曲線橋と足場の接触が1区間内に複数ある場合、中点だけでは見落とす。
-            // 4分の1点と4分の3点でも誤差を調べ、短い凹凸も分割の判断に含める。
-            bool skinError = detailedSkin && (Mathf.Abs(b-a)>0.01f
-                || Vector3.Distance(At(Mathf.Lerp(a,b,.25f)),Vector3.Lerp(pa,pb,.25f))>0.00005f
-                || Vector3.Distance(At(Mathf.Lerp(a,b,.75f)),Vector3.Lerp(pa,pb,.75f))>0.00005f);
-            // 誤差が大きければ前半・後半を再び調べる。深さの上限で分割しすぎも防ぐ。
-            if (depth < (detailedSkin ? 14 : 12) && (skinError || Mathf.Abs(b - a) > 0.04f || Vector3.Distance(pm, (pa + pb) * 0.5f) > 0.0002f))
+            // スキン付きの橋は短い凹凸を中点だけでは見落とすので、1/4と3/4の点でも調べる。
+            bool skinError = detailedSkin && (Mathf.Abs(b - a) > 0.01f
+                || Vector3.Distance(At(Mathf.Lerp(a, b, .25f)), Vector3.Lerp(pa, pb, .25f)) > 0.00005f
+                || Vector3.Distance(At(Mathf.Lerp(a, b, .75f)), Vector3.Lerp(pa, pb, .75f)) > 0.00005f);
+            if (depth < (detailedSkin ? 14 : 12)
+                && (skinError || Mathf.Abs(b - a) > 0.04f
+                    || Vector3.Distance(pm, (pa + pb) * 0.5f) > 0.0002f))
             {
                 Segment(a, pa, middle, pm, depth + 1);
                 Segment(middle, pm, b, pb, depth + 1);
             }
             else points.Add(pb);
         }
-        // 現在の体が表面に接していることを確認する。大きく離れている場合は、突然表面へ飛ばさず経路作成を失敗にする。
+
+        // 今の体が表面から大きく離れていたら、急に表面へ飛ばさず経路作成を失敗にする。
         Vector3 supportedStart = At(first.x);
         if (Vector3.Distance(start, supportedStart) > 0.001f) return null;
         Segment(first.x, start, end, At(end), 0);
@@ -326,8 +394,8 @@ public struct BridgeBoardSurface
 }
 
 /// <summary>
-/// 橋を描画するための再利用可能な表示部品。
-/// 元のSpriteRendererは移動・成功判定の基準として残し、通常橋とスキン画像をここで描き分ける。
+/// 橋を描画するための使い回せる表示部品。
+/// 元のSpriteRendererは移動・判定の基準として残し、表示はここで描き分ける。
 /// </summary>
 public sealed class BridgeBoardVisual : IDisposable
 {
@@ -342,18 +410,20 @@ public sealed class BridgeBoardVisual : IDisposable
     private readonly BridgeSkinVisual skinVisual;
     public bool Visible => root.activeSelf;
     public BridgeBoardSurface Surface => surface;
+
     public float TopY
     {
         get
         {
-            if(skinVisual.Visible)return skinVisual.TopY;
-            float top=float.NegativeInfinity;
-            foreach(var part in parts)if(part.enabled)top=Mathf.Max(top,part.bounds.max.y);
+            if (skinVisual.Visible) return skinVisual.TopY;
+            float top = float.NegativeInfinity;
+            foreach (var part in parts)
+                if (part.enabled) top = Mathf.Max(top, part.bounds.max.y);
             return top;
         }
     }
 
-    // 表示用の部品を一度だけ作って再利用する。成功するたびにGameObjectが増え続ける構成を避ける。
+    // 表示用の部品は一度だけ作って使い回し、成功のたびにGameObjectが増えないようにする。
     public BridgeBoardVisual(string name)
     {
         root = new GameObject(name);
@@ -367,25 +437,34 @@ public sealed class BridgeBoardVisual : IDisposable
     }
 
     public void Show(bool visible) => root.SetActive(visible);
-    public void Shift(Vector3 delta) { surface.Origin += delta; root.transform.position += delta; }
-    public void ApplyCollapse(Vector3 pivot,Vector3 displacement,float degrees)
+
+    public void Shift(Vector3 delta)
     {
-        Quaternion turn=Quaternion.Euler(0,0,degrees);
-        // 親オブジェクトを動かして橋全体を一体で落とす。
-        // 曲線・接続部・Scale・停止時の伸縮状態はそのまま保つ。
-        root.transform.SetPositionAndRotation(pivot+displacement-turn*pivot,turn);
+        surface.Origin += delta;
+        root.transform.position += delta;
     }
+
+    // 親を動かして橋全体を一体で落とす。曲線・接続部・伸縮の状態はそのまま保つ。
+    public void ApplyCollapse(Vector3 pivot, Vector3 displacement, float degrees)
+    {
+        Quaternion turn = Quaternion.Euler(0, 0, degrees);
+        root.transform.SetPositionAndRotation(pivot + displacement - turn * pivot, turn);
+    }
+
     public void SetAlpha(float alpha)
     {
-        Color faded = color; faded.a *= alpha;
+        Color faded = color;
+        faded.a *= alpha;
         foreach (SpriteRenderer part in parts) part.color = faded;
         skinVisual.SetAlpha(alpha);
     }
-    // 同じ表面データから表示を更新する。専用スキンがあれば画像メッシュを使い、それ以外は板と接続部を描く。
+
+    // 表面データから表示を作り直す。スキンがあれば画像メッシュ、なければ板と接続部を描く。
     public void Configure(BridgeBoardSurface shape, SpriteRenderer source)
     {
-        surface = shape; color = source.color;
-        root.transform.SetPositionAndRotation(Vector3.zero,Quaternion.identity);
+        surface = shape;
+        color = source.color;
+        root.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
         foreach (SpriteRenderer part in parts)
         {
             part.enabled = false;
@@ -398,28 +477,41 @@ public sealed class BridgeBoardVisual : IDisposable
             part.maskInteraction = source.maskInteraction;
             part.spriteSortPoint = source.spriteSortPoint;
         }
-        if(shape.Skin!=null && shape.SkinMaterial!=null) {
-            skinVisual.Configure(shape,source,shape.SkinMaterial);
+        if (shape.Skin != null && shape.SkinMaterial != null)
+        {
+            skinVisual.Configure(shape, source, shape.SkinMaterial);
             return;
         }
         skinVisual.Show(false);
-        // 指定した区間を1枚の板として表示する局所関数。下面を基準へ合わせ、厚みを法線方向に作る。
+
+        // 指定した範囲を1枚の板として表示する。下面を基準に合わせ、厚みは上向きに付ける。
         void Strip(int index, float from, float to, Vector3 axis, Vector3 normal)
         {
             if (to - from < 0.000001f) return;
             SpriteRenderer part = parts[index];
             part.sprite = source.sprite;
-            part.flipX = source.flipX; part.flipY = source.flipY;
+            part.flipX = source.flipX;
+            part.flipY = source.flipY;
             part.drawMode = SpriteDrawMode.Simple;
             Bounds bounds = source.localBounds;
             part.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(axis.y, axis.x) * Mathf.Rad2Deg);
-            part.transform.localScale = new Vector3((to - from) / bounds.size.x, shape.Height / bounds.size.y, 1f);
+            part.transform.localScale = new Vector3(
+                (to - from) / bounds.size.x, shape.Height / bounds.size.y, 1f);
             part.transform.position = shape.Origin + axis * ((from + to) * 0.5f)
-                - (part.transform.TransformPoint(new Vector3(bounds.center.x, bounds.min.y, bounds.center.z)) - part.transform.position);
+                - (part.transform.TransformPoint(
+                    new Vector3(bounds.center.x, bounds.min.y, bounds.center.z))
+                    - part.transform.position);
             part.enabled = true;
         }
-        if (!shape.Bent) { Strip(0, shape.Min, shape.Max, shape.Axis, shape.Normal); return; }
-        if (shape.Min < 0f) Strip(0, shape.Min / shape.Cosine, Mathf.Min(shape.Max, 0f) / shape.Cosine, shape.LeftAxis, shape.LeftNormal);
+
+        if (!shape.Bent)
+        {
+            Strip(0, shape.Min, shape.Max, shape.Axis, shape.Normal);
+            return;
+        }
+        if (shape.Min < 0f)
+            Strip(0, shape.Min / shape.Cosine, Mathf.Min(shape.Max, 0f) / shape.Cosine,
+                shape.LeftAxis, shape.LeftNormal);
         if (shape.Max > 0f) Strip(1, Mathf.Max(shape.Min, 0f), shape.Max, shape.Axis, shape.Normal);
         if (shape.Min >= 0f || shape.Max <= 0f) return;
         if (sourceSprite != source.sprite)
@@ -427,7 +519,7 @@ public sealed class BridgeBoardVisual : IDisposable
             if (jointSprite != null) UnityEngine.Object.Destroy(jointSprite);
             sourceSprite = source.sprite;
             jointReady = false;
-            // 元アセットを加工せず、実行時のSpriteコピーだけを接続部の形に変える。
+            // 元の画像は加工せず、実行時に作ったコピーだけを接続部の形に変える。
             Rect rect = sourceSprite.rect;
             jointSprite = Sprite.Create(sourceSprite.texture, rect,
                 new Vector2(sourceSprite.pivot.x / rect.width, sourceSprite.pivot.y / rect.height),
@@ -436,22 +528,31 @@ public sealed class BridgeBoardVisual : IDisposable
         }
         Vector2 center = sourceSprite.bounds.center;
         Vector2 a = (Vector2)(shape.LeftNormal * shape.Height), b = (Vector2)(shape.Normal * shape.Height);
-        // 接続部の頂点を、SpriteのPivotとpixelsPerUnitを使って組み立てる。
         Vector2 pixelCenter = sourceSprite.pivot + center * sourceSprite.pixelsPerUnit;
-        if (!jointReady || Vector3.Distance(jointLeftNormal, shape.LeftNormal) > 0.00001f
-            || Vector3.Distance(jointNormal, shape.Normal) > 0.00001f || Mathf.Abs(jointHeight - shape.Height) > 0.00001f)
+        if (!jointReady
+            || Vector3.Distance(jointLeftNormal, shape.LeftNormal) > 0.00001f
+            || Vector3.Distance(jointNormal, shape.Normal) > 0.00001f
+            || Mathf.Abs(jointHeight - shape.Height) > 0.00001f)
         {
-            jointSprite.OverrideGeometry(new[] { pixelCenter,
-                pixelCenter + a * sourceSprite.pixelsPerUnit, pixelCenter + b * sourceSprite.pixelsPerUnit },
+            jointSprite.OverrideGeometry(
+                new[]
+                {
+                    pixelCenter,
+                    pixelCenter + a * sourceSprite.pixelsPerUnit,
+                    pixelCenter + b * sourceSprite.pixelsPerUnit
+                },
                 a.x * b.y - a.y * b.x > 0f ? new ushort[] { 0, 2, 1 } : new ushort[] { 0, 1, 2 });
-            jointReady = true; jointLeftNormal = shape.LeftNormal; jointNormal = shape.Normal; jointHeight = shape.Height;
+            jointReady = true;
+            jointLeftNormal = shape.LeftNormal;
+            jointNormal = shape.Normal;
+            jointHeight = shape.Height;
         }
         parts[2].sprite = jointSprite;
         parts[2].transform.SetPositionAndRotation(shape.Origin - (Vector3)center, Quaternion.identity);
         parts[2].transform.localScale = Vector3.one;
         parts[2].enabled = true;
     }
-    // 実行時に作った表示専用オブジェクトとSpriteを解放する。元アセットは保持する。
+
     public void Dispose()
     {
         skinVisual.Dispose();
@@ -461,7 +562,7 @@ public sealed class BridgeBoardVisual : IDisposable
 }
 
 /// <summary>
-/// 次の傾斜抽選のタイミングと結果を管理する。ステージ番号自体はGameManagerから受け取る。
+/// 傾斜を変えるタイミングと向きの抽選を管理する。ステージ番号はGameManagerから受け取る。
 /// </summary>
 public sealed class BridgeSlopeSchedule
 {
@@ -471,21 +572,26 @@ public sealed class BridgeSlopeSchedule
     public long NextChangeStage { get; private set; }
     public float Angle => Direction * BridgeSlopeGeometry.AngleDegrees;
 
-    public BridgeSlopeSchedule(System.Random random = null) { this.random = random ?? new System.Random(); }
-    // 新しいプレイの初回傾斜と3〜6区間の間隔を抽選し、次に抽選するステージを決める。
+    public BridgeSlopeSchedule(System.Random random = null)
+    {
+        this.random = random ?? new System.Random();
+    }
+
+    // 新しいプレイの最初の傾斜と、次に変わるまでの区間数（3〜6）を抽選する。
     public void Reset()
     {
         Direction = random.Next(0, 3) - 1;
         Interval = random.Next(3, 7);
         NextChangeStage = 1L + Interval;
     }
-    // ステージ番号が次のしきい値へ達したら抽選する。whileにすることで、番号がまとめて進んだ場合にも予定を追いつかせる。
+
+    // ステージが予定に達したら抽選する。番号がまとめて進んでも追いつけるようwhileにしている。
     public bool AdvanceTo(long stage)
     {
         bool changed = false;
         while (stage >= NextChangeStage && NextChangeStage > 0)
         {
-            // 3〜6区間ごとに、下り・水平・上りをそれぞれ1/3で抽選する。同じ傾斜が続く場合もある。
+            // 下り・水平・上りをそれぞれ1/3で抽選する。同じ傾斜が続くこともある。
             Direction = random.Next(0, 3) - 1;
             Interval = random.Next(3, 7);
             NextChangeStage += Interval;

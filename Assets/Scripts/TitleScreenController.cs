@@ -9,7 +9,9 @@ public sealed class TitleScreenController : MonoBehaviour
     [SerializeField] private Button startButton;
     [SerializeField] private string gameScenePath = "Assets/Scenes/Game Scene.unity";
     private bool starting;
+
     private void Awake() { if (startButton != null) startButton.onClick.AddListener(StartGame); }
+
     public void StartGame()
     {
         if (starting) return;
@@ -24,5 +26,6 @@ public sealed class TitleScreenController : MonoBehaviour
         }
         SceneManager.LoadSceneAsync(gameScenePath, LoadSceneMode.Single);
     }
+
     private void OnDestroy() { if (startButton != null) startButton.onClick.RemoveListener(StartGame); }
 }

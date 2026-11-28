@@ -3,14 +3,15 @@ using System.Collections;
 using UnityEngine;
 
 /// <summary>
-/// 既存のCircle Child 1人の待機・獲得・経路追従・回転を管理する。シーン参照を保つため以前のクラス名を使用。
+/// 子供のCircle 1人の待機・仲間入り・親への追従・転がりを管理する。
+/// シーンの参照を保つため、以前のクラス名のままにしている。
 /// </summary>
 [DisallowMultipleComponent]
 public sealed class CircleCompanionStack : MonoBehaviour
 {
     [SerializeField] private CharacterMover parentCircle;
     [SerializeField] private GameObject childObject;
-    [Tooltip("Center-to-center distance along the current surface. Clamped only for body clearance and the landing platform.")]
+    [Tooltip("親と子供の中心どうしの距離（足場に沿った長さ）。体が重ならない距離と着地する足場の範囲でだけ制限される。")]
     [SerializeField, Min(0.1f)] private float followDistance = 0.70f;
     [SerializeField, Min(0.01f)] private float settleSeconds = 0.15f;
 
@@ -45,9 +46,17 @@ public sealed class CircleCompanionStack : MonoBehaviour
     {
         if (!Capture()) return default;
         Transform child = childObject.transform;
-        return new RoundState { acquired = AcquiredCount, waiting = waiting, active = childObject.activeSelf,
-            position = child.position, rotation = child.rotation, scale = child.localScale,
-            parent = child.parent, waitingBase = waitingBase };
+        return new RoundState
+        {
+            acquired = AcquiredCount,
+            waiting = waiting,
+            active = childObject.activeSelf,
+            position = child.position,
+            rotation = child.rotation,
+            scale = child.localScale,
+            parent = child.parent,
+            waitingBase = waitingBase
+        };
     }
 
     public void RestoreRoundState(RoundState state)
@@ -55,14 +64,22 @@ public sealed class CircleCompanionStack : MonoBehaviour
         if (!Capture()) return;
         StopAllCoroutines();
         following = IsJoining = false;
-        path = leadPath = null; distances = leadDistances = null; progress = 0f;
-        AcquiredCount = state.acquired; waiting = state.waiting; waitingBase = state.waitingBase;
+        path = leadPath = null;
+        distances = leadDistances = null;
+        progress = 0f;
+        AcquiredCount = state.acquired;
+        waiting = state.waiting;
+        waitingBase = state.waitingBase;
         Transform child = childObject.transform;
         child.SetParent(state.parent, false);
         child.localScale = state.scale;
         child.SetPositionAndRotation(state.position, state.rotation);
         childObject.SetActive(state.active);
-        if (childMover != null) { childMover.CancelCrossing(); childMover.enabled = false; }
+        if (childMover != null)
+        {
+            childMover.CancelCrossing();
+            childMover.enabled = false;
+        }
     }
 
     private bool Capture()
@@ -71,7 +88,8 @@ public sealed class CircleCompanionStack : MonoBehaviour
         if (parentCircle == null || childObject == null || childObject == parentCircle.gameObject
             || !childObject.TryGetComponent(out body) || body.sprite == null)
         {
-            Debug.LogError("[BridgeJust] Assign the existing Circle Child and parent Circle to the single companion component.", this);
+            Debug.LogError("[BridgeJust] Assign the existing Circle Child and parent Circle "
+                + "to the single companion component.", this);
             return false;
         }
         originalParent = childObject.transform.parent;
@@ -83,7 +101,8 @@ public sealed class CircleCompanionStack : MonoBehaviour
         SpriteRenderer parentBody = parentCircle.GetComponent<SpriteRenderer>();
         parentRadius = parentBody.localBounds.extents.x * Mathf.Abs(parentCircle.transform.lossyScale.x);
         rollingMultiplier = childMover != null ? childMover.RollingMultiplier : parentCircle.RollingMultiplier;
-        if (childMover != null) childMover.enabled = false; // 子供の移動はこのクラスにまとめるため、子供側の自動移動は止める。
+        // 子供の移動はこのクラスで行うので、子供側のCharacterMoverは止めておく。
+        if (childMover != null) childMover.enabled = false;
         if (radius <= 0f || parentRadius <= 0f) return false;
         captured = true;
         return true;
@@ -92,7 +111,10 @@ public sealed class CircleCompanionStack : MonoBehaviour
     public void ResetForRun()
     {
         following = waiting = IsJoining = false;
-        AcquiredCount = 0; path = null; leadPath = null; leadDistances = null;
+        AcquiredCount = 0;
+        path = null;
+        leadPath = null;
+        leadDistances = null;
         if (!Capture()) return;
         Transform child = childObject.transform;
         child.SetParent(originalParent, false);
@@ -109,7 +131,7 @@ public sealed class CircleCompanionStack : MonoBehaviour
             waitingBase = childObject.transform.position;
             return;
         }
-        // 成功回数10回でステージ11を準備する。Perfectの加点数とは別に数える。
+        // ステージ11（成功10回の後）で、右の足場に子供を出す。
         if (stage != 11 || waiting || rightPlatform == null) return;
         float along = Mathf.Max(0f, BridgeSlopeGeometry.Length(rightPlatform) * 0.5f - radius - 0.06f);
         childObject.transform.rotation = originalRotation;
@@ -135,11 +157,12 @@ public sealed class CircleCompanionStack : MonoBehaviour
         Vector2 landing = BridgeSlopeGeometry.Interval(right, surface.Origin, surface.Axis);
         float parentS = Vector3.Dot(parentCircle.transform.position - surface.Origin, surface.Axis);
         float gap = Mathf.Max(followDistance, parentRadius + radius + 0.025f);
-        // 子供の到着位置は、再利用される古い足場ではなく、親がいる新しい足場の範囲内に収める。
+        // 子供の着地点は、親がいる新しい足場の範囲内に収める。
         return Mathf.Clamp(parentS - gap, landing.x + radius + 0.025f, landing.y - radius - 0.025f);
     }
 
-    public bool BeginFollowing(SpriteRenderer left, SpriteRenderer right, SpriteRenderer board, Vector3 parentDestination, Vector3[] parentPath = null)
+    public bool BeginFollowing(SpriteRenderer left, SpriteRenderer right, SpriteRenderer board,
+        Vector3 parentDestination, Vector3[] parentPath = null)
     {
         if (AcquiredCount == 0) return true;
         var surface = new BridgeBoardSurface(left, board);
@@ -147,15 +170,19 @@ public sealed class CircleCompanionStack : MonoBehaviour
         float gap = Mathf.Max(followDistance, parentRadius + radius + 0.025f);
         float end = Mathf.Clamp(Vector3.Dot(parentDestination - surface.Origin, surface.Axis) - gap,
             landing.x + radius + 0.025f, landing.y - radius - 0.025f);
-        Vector3[] points = surface.PathToSurfacePosition(left, right, childObject.transform.position, radius, end);
+        Vector3[] points = surface.PathToSurfacePosition(left, right,
+            childObject.transform.position, radius, end);
         if (!SetPath(points, surface.Origin, surface.Axis)) return false;
-        leadPath=null; leadDistances=null;
-        if(parentPath!=null && parentPath.Length>0)
+        leadPath = null;
+        leadDistances = null;
+        if (parentPath != null && parentPath.Length > 0)
         {
-            leadPath=new Vector3[parentPath.Length+1];leadPath[0]=parentCircle.transform.position;
-            Array.Copy(parentPath,0,leadPath,1,parentPath.Length);
-            leadDistances=new float[leadPath.Length];
-            for(int i=1;i<leadPath.Length;i++)leadDistances[i]=leadDistances[i-1]+Vector3.Distance(leadPath[i-1],leadPath[i]);
+            leadPath = new Vector3[parentPath.Length + 1];
+            leadPath[0] = parentCircle.transform.position;
+            Array.Copy(parentPath, 0, leadPath, 1, parentPath.Length);
+            leadDistances = new float[leadPath.Length];
+            for (int i = 1; i < leadPath.Length; i++)
+                leadDistances[i] = leadDistances[i - 1] + Vector3.Distance(leadPath[i - 1], leadPath[i]);
         }
         following = true;
         return true;
@@ -168,8 +195,11 @@ public sealed class CircleCompanionStack : MonoBehaviour
         path[0] = childObject.transform.position;
         Array.Copy(points, 0, path, 1, points.Length);
         distances = new float[path.Length];
-        for (int i = 1; i < path.Length; i++) distances[i] = distances[i - 1] + Vector3.Distance(path[i - 1], path[i]);
-        progress = 0f; pathOrigin = origin; pathAxis = axis;
+        for (int i = 1; i < path.Length; i++)
+            distances[i] = distances[i - 1] + Vector3.Distance(path[i - 1], path[i]);
+        progress = 0f;
+        pathOrigin = origin;
+        pathAxis = axis;
         return true;
     }
 
@@ -189,17 +219,22 @@ public sealed class CircleCompanionStack : MonoBehaviour
         if (!following || !parentCircle.IsCrossing || path == null) return;
         float gap = Mathf.Max(followDistance, parentRadius + radius + 0.025f);
         float parentS = Vector3.Dot(parentCircle.transform.position - pathOrigin, pathAxis);
-        float s = parentS-gap;
-        if(leadPath!=null)
+        float s = parentS - gap;
+        if (leadPath != null)
         {
-            // 親が通った経路に沿って追従距離を測り、子供自身の半径に合う経路上の位置へ移動する。
-            // 曲線を直線で横切ってめり込まないようにする。
-            int i=1;
-            while(i<leadPath.Length-1 && Vector3.Dot(leadPath[i]-pathOrigin,pathAxis)<parentS)i++;
-            float a=Vector3.Dot(leadPath[i-1]-pathOrigin,pathAxis), b=Vector3.Dot(leadPath[i]-pathOrigin,pathAxis);
-            float target=Mathf.Max(0f,Mathf.Lerp(leadDistances[i-1],leadDistances[i],Mathf.InverseLerp(a,b,parentS))-gap);
-            i=1;while(i<leadPath.Length-1 && leadDistances[i]<target)i++;
-            s=Vector3.Dot(Vector3.Lerp(leadPath[i-1],leadPath[i],Mathf.InverseLerp(leadDistances[i-1],leadDistances[i],target))-pathOrigin,pathAxis);
+            // 親が通った経路に沿って追従距離を測る。
+            // 直線で測ると、曲がった橋の上で子供が表面にめり込むため。
+            int i = 1;
+            while (i < leadPath.Length - 1 && Vector3.Dot(leadPath[i] - pathOrigin, pathAxis) < parentS) i++;
+            float a = Vector3.Dot(leadPath[i - 1] - pathOrigin, pathAxis),
+                b = Vector3.Dot(leadPath[i] - pathOrigin, pathAxis);
+            float target = Mathf.Max(0f,
+                Mathf.Lerp(leadDistances[i - 1], leadDistances[i], Mathf.InverseLerp(a, b, parentS)) - gap);
+            i = 1;
+            while (i < leadPath.Length - 1 && leadDistances[i] < target) i++;
+            s = Vector3.Dot(Vector3.Lerp(leadPath[i - 1], leadPath[i],
+                    Mathf.InverseLerp(leadDistances[i - 1], leadDistances[i], target)) - pathOrigin,
+                pathAxis);
         }
         MoveAlongPath(DistanceAtS(s), parentCircle.MoveSpeed * Time.deltaTime);
     }
@@ -213,22 +248,25 @@ public sealed class CircleCompanionStack : MonoBehaviour
             Mathf.InverseLerp(distances[i - 1], distances[i], next));
         float travelled = next - progress;
         if (travelled > 0f)
-            childObject.transform.Rotate(0f, 0f, -travelled / radius * Mathf.Rad2Deg * rollingMultiplier, Space.World);
+            childObject.transform.Rotate(0f, 0f,
+                -travelled / radius * Mathf.Rad2Deg * rollingMultiplier, Space.World);
         progress = next;
     }
 
-    public IEnumerator FinishArrival(int successes, SpriteRenderer left, SpriteRenderer right, SpriteRenderer board)
+    public IEnumerator FinishArrival(int successes, SpriteRenderer left, SpriteRenderer right,
+        SpriteRenderer board)
     {
         if (IsJoining) yield break;
         bool recruit = waiting && successes == 11 && AcquiredCount == 0;
         if (recruit)
         {
-            waiting = false; IsJoining = true; // 待ち時間に入る前に獲得処理を開始済みにし、二重に仲間へ加わるのを防ぐ。
+            // 待つ前に仲間入りを開始済みにして、二重に仲間になるのを防ぐ。
+            waiting = false;
+            IsJoining = true;
             var surface = new BridgeBoardSurface(left, board);
-            Vector3[] arrival = surface.PathToSurfacePosition(left, right, childObject.transform.position, radius,
-                LandingS(surface, right));
-            // 仲間になるときは停止中の親の上を跳び越え、親の体を通り抜けないようにする。
-            // 出発点と着地点はどちらも子供の半径に合った支持面上に置く。
+            Vector3[] arrival = surface.PathToSurfacePosition(left, right,
+                childObject.transform.position, radius, LandingS(surface, right));
+            // 仲間になるときは止まっている親を跳び越え、親の体を通り抜けないようにする。
             if (arrival != null)
             {
                 Vector2 parent = surface.Coordinates(parentCircle.transform.position);
@@ -261,18 +299,21 @@ public sealed class CircleCompanionStack : MonoBehaviour
             MoveAlongPath(distances[distances.Length - 1], float.MaxValue);
             if (recruit) AcquiredCount = 1;
             following = IsJoining = false;
-            path = null; leadPath=null;leadDistances=null; waitingBase = childObject.transform.position;
+            path = null;
+            leadPath = null;
+            leadDistances = null;
+            waitingBase = childObject.transform.position;
         }
     }
 
-    // 完成した橋が消えてから、同じ足場の上面へ滑らかに降ろす。
-    // 子供が橋を渡っている間は、使い終わった足場を移動しない。
+    // 完成した橋が消えてから、子供を足場の上面へ降ろす。
     public IEnumerator SettleOnPlatform(SpriteRenderer platform)
     {
         if (AcquiredCount == 0) yield break;
         Vector3 start = childObject.transform.position;
         float along = Vector3.Dot(start - BridgeSlopeGeometry.TopCenter(platform), platform.transform.right);
-        Vector3 target = BridgeSlopeGeometry.TopCenter(platform) + platform.transform.right * along + platform.transform.up * radius;
+        Vector3 target = BridgeSlopeGeometry.TopCenter(platform)
+            + platform.transform.right * along + platform.transform.up * radius;
         target.z = start.z;
         float elapsed = 0f;
         while (elapsed < settleSeconds)
@@ -290,27 +331,37 @@ public sealed class CircleCompanionStack : MonoBehaviour
     {
         if (!captured || (!waiting && AcquiredCount == 0)) return;
         childObject.transform.position += delta;
-        waitingBase += delta; pathOrigin += delta;
+        waitingBase += delta;
+        pathOrigin += delta;
         if (path != null) for (int i = 0; i < path.Length; i++) path[i] += delta;
-        if (leadPath != null) for (int i=0;i<leadPath.Length;i++) leadPath[i]+=delta;
+        if (leadPath != null) for (int i = 0; i < leadPath.Length; i++) leadPath[i] += delta;
     }
 
     public void CancelWaiting()
     {
-        waiting = following = IsJoining = false; path = null; leadPath=null;leadDistances=null;
+        waiting = following = IsJoining = false;
+        path = null;
+        leadPath = null;
+        leadDistances = null;
         if (AcquiredCount == 0 && childObject != null) childObject.SetActive(false);
     }
 
     /// <summary>
-    /// 獲得済みの子供だけ、失敗演出へ移動の制御を渡す。
+    /// 仲間になっている子供だけ、移動の制御を失敗演出へ渡す。
     /// </summary>
-    public bool TakeFailureControl(out Transform child,out float bodyRadius,out float rolling,out float spacing)
+    public bool TakeFailureControl(out Transform child, out float bodyRadius,
+        out float rolling, out float spacing)
     {
-        child=null;bodyRadius=0f;rolling=0f;spacing=followDistance;
-        bool acquired=AcquiredCount==1 && Capture() && childObject.activeInHierarchy;
-        CancelWaiting(); // 通常の追従更新を解除する。獲得済みの子供は落下を見せるため表示を保つ。
-        if(!acquired)return false;
-        child=childObject.transform;bodyRadius=radius;rolling=rollingMultiplier;
+        child = null;
+        bodyRadius = 0f;
+        rolling = 0f;
+        spacing = followDistance;
+        bool acquired = AcquiredCount == 1 && Capture() && childObject.activeInHierarchy;
+        CancelWaiting(); // 通常の追従を止める。仲間の子供は落ちる様子を見せるため表示したまま。
+        if (!acquired) return false;
+        child = childObject.transform;
+        bodyRadius = radius;
+        rolling = rollingMultiplier;
         return true;
     }
 }

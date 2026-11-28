@@ -468,7 +468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &220610848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -687,18 +687,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 66b05697b9ad090448fcc7b35caa14c3, type: 3}
-    m_FontSize: 44
+    m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 44
+    m_MinSize: 4
+    m_MaxSize: 48
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: FROM START
+  m_Text: "START OVER\t"
 --- !u!222 &288024740
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1151,18 +1151,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 66b05697b9ad090448fcc7b35caa14c3, type: 3}
-    m_FontSize: 44
+    m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 44
+    m_MinSize: 4
+    m_MaxSize: 48
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: STAGE
+  m_Text: TRY AGAIN
 --- !u!222 &356140415
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1518,6 +1518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   scrollSeconds: 0.6
   screenFixedWorldObjects: []
+  stageScreenRaise: 0.5
 --- !u!1 &546789515
 GameObject:
   m_ObjectHideFlags: 0
@@ -4362,6 +4363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   soundEffectSource: {fileID: 1744467871}
+  bgmSource: {fileID: 0}
+  bgmClip: {fileID: 8300000, guid: 89affa93776c6bf4ca3d1ec4f311719a, type: 3}
+  playBgmOnStart: 1
   startRetryClip: {fileID: 8300000, guid: 49c728d9c2ecb1e4f98e74e16fbf76c0, type: 3}
   successClip: {fileID: 8300000, guid: 49c728d9c2ecb1e4f98e74e16fbf76c0, type: 3}
   perfectClip: {fileID: 8300000, guid: 0dd9cd270eb4d4140a82bf4959f3ac0b, type: 3}
@@ -4372,6 +4376,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f3d15de3fb9157b45b58785029753c44, type: 3}
   failClip: {fileID: 8300000, guid: a5d21543a62f650439bebe6e3563d525, type: 3}
   soundEffectVolume: 1
+  bgmVolume: 0.2
 --- !u!4 &1523478856
 Transform:
   m_ObjectHideFlags: 0
@@ -5907,7 +5912,7 @@ Transform:
   m_GameObject: {fileID: 1784964977}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -2, z: 0}
+  m_LocalPosition: {x: -1.67, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

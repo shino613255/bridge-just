@@ -9,8 +9,10 @@ using UnityEngine;
 public sealed class CameraFollow : MonoBehaviour
 {
     [SerializeField, Min(0.01f)] private float scrollSeconds = 0.6f;
-    [Tooltip("Optional world decorations to keep on screen. Camera-child backgrounds and Overlay UI need no entry.")]
+    [Tooltip("画面に固定しておく飾り（任意）。カメラの子の背景やUIは入れなくてよい。")]
     [SerializeField] private Transform[] screenFixedWorldObjects = new Transform[0];
+    [Tooltip("足場・橋・キャラを画面上でどれだけ上に表示するか（ワールド単位）。背景と固定した飾りは動かない。")]
+    [SerializeField] private float stageScreenRaise = 0.5f;
 
     private Camera view;
     private Vector3 initialPosition;
@@ -18,20 +20,27 @@ public sealed class CameraFollow : MonoBehaviour
     private bool captured;
     public bool IsScrolling { get; private set; }
     public float InitialX => initialPosition.x;
-    public float ViewLeftX => view.ViewportToWorldPoint(new Vector3(0f, 0.5f, view.nearClipPlane)).x;
-    public float ViewRightX => view.ViewportToWorldPoint(new Vector3(1f, 0.5f, view.nearClipPlane)).x;
+    public float ViewLeftX
+        => view.ViewportToWorldPoint(new Vector3(0f, 0.5f, view.nearClipPlane)).x;
+    public float ViewRightX
+        => view.ViewportToWorldPoint(new Vector3(1f, 0.5f, view.nearClipPlane)).x;
 
     private void Awake()
     {
         view = GetComponent<Camera>();
-        initialPosition = transform.position;
+        // カメラを下げると、足場・橋・キャラは画面上で上へ移る。
+        // 固定した飾りは同じだけ下げ、画面上の位置を変えない。
+        Vector3 lower = Vector3.down * (Finite(stageScreenRaise) ? stageScreenRaise : 0f);
+        initialPosition = transform.position + lower;
         backgroundPositions = new Vector3[screenFixedWorldObjects.Length];
         for (int i = 0; i < screenFixedWorldObjects.Length; i++)
         {
             if (screenFixedWorldObjects[i] != null)
-                backgroundPositions[i] = screenFixedWorldObjects[i].position;
+                backgroundPositions[i] = screenFixedWorldObjects[i].position + lower;
         }
+        transform.position = initialPosition;
         captured = true;
+        ApplyBackgroundPositions();
     }
 
     public bool ValidateSetup(out string error)
@@ -50,13 +59,16 @@ public sealed class CameraFollow : MonoBehaviour
                 if (item == null) continue;
                 if (item == transform || transform.IsChildOf(item))
                 {
-                    error = "CameraFollow background entries must be assigned and must not contain the camera.";
+                    error = "CameraFollow background entries must be assigned "
+                        + "and must not contain the camera.";
                     break;
                 }
                 for (int j = 0; j < i; j++)
                 {
-                    if (screenFixedWorldObjects[j] != null && (item == screenFixedWorldObjects[j] || item.IsChildOf(screenFixedWorldObjects[j])
-                        || screenFixedWorldObjects[j].IsChildOf(item)))
+                    if (screenFixedWorldObjects[j] != null
+                        && (item == screenFixedWorldObjects[j]
+                            || item.IsChildOf(screenFixedWorldObjects[j])
+                            || screenFixedWorldObjects[j].IsChildOf(item)))
                     {
                         error = "Assign each background root once; do not include its children separately.";
                         break;
@@ -75,12 +87,13 @@ public sealed class CameraFollow : MonoBehaviour
         return false;
     }
 
-    // このコルーチンはGameManagerが実行する。区間移行を中断すればスクロールも停止できる。
+    // GameManagerが動かすので、区間の切り替えを止めればスクロールも止まる。
     public IEnumerator ScrollToX(float targetX)
     {
         if (IsScrolling || !Finite(targetX) || !ValidateSetup(out string error))
         {
-            Debug.LogError("[BridgeJust] Camera scroll could not start. Check CameraFollow setup and state.", this);
+            Debug.LogError("[BridgeJust] Camera scroll could not start. "
+                + "Check CameraFollow setup and state.", this);
             yield break;
         }
         IsScrolling = true;
